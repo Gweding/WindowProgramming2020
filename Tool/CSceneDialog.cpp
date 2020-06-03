@@ -196,7 +196,7 @@ void CSceneDialog::OnBnClicked_LoadBackImage()
 	TCHAR szCurPath[MAX_STR] = L"";
 	GetCurrentDirectory(MAX_STR, szCurPath);
 	PathRemoveFileSpec(szCurPath);
-	lstrcat(szCurPath, L"\\Bin\\Resources\\Sprite\\");
+	lstrcat(szCurPath, L"\\Binary\\Resources\\Sprite\\");
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
 
 	if (IDOK == Dlg.DoModal())

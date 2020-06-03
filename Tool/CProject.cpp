@@ -25,10 +25,10 @@ HRESULT CProject::Ready_Project()
 	m_pSoundMgr->Ready_SoundManager();
 	m_pResourceMgr->Ready_ResourceManager();
 
-	m_pResourceMgr->Load_Bmp(L"../Bin/Resources/Back.bmp", L"Back");
-	m_pResourceMgr->Load_Bmp(L"../Bin/Resources/Back.bmp", L"MemDC");
+	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Back");
+	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"MemDC");
 
-	m_pResourceMgr->Load_Sprite(L"../Bin/Resources/Default.png", L"Default");
+	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Default.png", L"Default");
 
 	//
 	m_pScene = CScene::Create();
