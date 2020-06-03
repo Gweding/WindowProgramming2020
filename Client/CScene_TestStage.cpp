@@ -19,7 +19,7 @@ HRESULT CScene_TestStage::Ready_Scene()
 
 	for (int i = 0; i < 5; ++i)
 	{
-		pObj = CTest::Create(10 * i, 10 * i, L"../Binary/Resources/Profile_-_Forky.png");
+		pObj = CTest::Create(10 * i, 10 * i, L"../Binary/Resources/Profile_-_Forky1.png");
 		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
 	}
 

@@ -340,5 +340,3 @@ ASALocalRun/
 healthchecksdb
 
 # Build Files
-Tool.exe
-Client.exe
