@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="00 MainApp">
+      <UniqueIdentifier>{19d30c61-3001-4e34-8e72-98fb28f185f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj">
+      <UniqueIdentifier>{540a569e-abbb-45c3-9f32-127cf4290479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene">
+      <UniqueIdentifier>{cbeec1de-c4ef-49ab-b150-d2dd7bfaa572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Default">
+      <UniqueIdentifier>{16a6c860-d105-49d6-9146-95c82543fb09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager">
+      <UniqueIdentifier>{a923108c-d2fd-4790-8ab5-1e83e7d4d5d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\01 KeyManager">
+      <UniqueIdentifier>{033d45f9-eec0-4412-bd7c-cd1ade68199a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\02 TimeManager">
+      <UniqueIdentifier>{c15fe9fd-4446-465e-b90c-6821600ab492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\03 CollisionManager">
+      <UniqueIdentifier>{66770725-690c-4f10-ae2a-c60d497c509d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\04 MathManager">
+      <UniqueIdentifier>{ba092d17-1649-4fba-86f1-52e85d23364e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\99 GameManager">
+      <UniqueIdentifier>{2d105f06-2a8b-4eb5-aa15-2da643d14c90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\97 SceneManager">
+      <UniqueIdentifier>{218608f9-b417-4937-9790-477c362ae796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\98 RenderManager">
+      <UniqueIdentifier>{6ea59593-4bbb-4b1f-8b13-a71092a62fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\05 ResourceManager">
+      <UniqueIdentifier>{974f1cf2-543d-4006-bf52-e6e74457eaa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\05 ResourceManager\Bitmap">
+      <UniqueIdentifier>{9092ba19-3d27-473a-9337-1dd033d76f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene\99 TestStage">
+      <UniqueIdentifier>{a166a380-c2b7-4cb1-85aa-ceb6cde74688}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainApp.h">
+      <Filter>00 MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObj.h">
+      <Filter>01 GameObj</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeManager.h">
+      <Filter>98 Manager\02 TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollisionManager.h">
+      <Filter>98 Manager\03 CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CMathManager.h">
+      <Filter>98 Manager\04 MathManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderManager.h">
+      <Filter>98 Manager\98 RenderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameManager.h">
+      <Filter>98 Manager\99 GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>02 Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>98 Manager\97 SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CBitmap.h">
+      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="CKeyManager.h">
+      <Filter>98 Manager\01 KeyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Stage.h">
+      <Filter>02 Scene\99 TestStage</Filter>
+    </ClInclude>
+    <ClInclude Include="CResourceManager.h">
+      <Filter>98 Manager\05 ResourceManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico">
+      <Filter>99 Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>99 Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc">
+      <Filter>99 Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp">
+      <Filter>99 Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainApp.cpp">
+      <Filter>00 MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObj.cpp">
+      <Filter>01 GameObj</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeManager.cpp">
+      <Filter>98 Manager\02 TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollisionManager.cpp">
+      <Filter>98 Manager\03 CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CMathManager.cpp">
+      <Filter>98 Manager\04 MathManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderManager.cpp">
+      <Filter>98 Manager\98 RenderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameManager.cpp">
+      <Filter>98 Manager\99 GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>02 Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>98 Manager\97 SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CBitmap.cpp">
+      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyManager.cpp">
+      <Filter>98 Manager\01 KeyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Stage.cpp">
+      <Filter>02 Scene\99 TestStage</Filter>
+    </ClCompile>
+    <ClCompile Include="CResourceManager.cpp">
+      <Filter>98 Manager\05 ResourceManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

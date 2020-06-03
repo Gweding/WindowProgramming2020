@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="00 WinApp">
+      <UniqueIdentifier>{50d832de-709a-42f8-8863-2afa807a5c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Default">
+      <UniqueIdentifier>{fffd1d95-1408-4195-be73-3da9938d73f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Document">
+      <UniqueIdentifier>{1287212a-2d68-4429-9e59-431d19e36f78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 MainFrame">
+      <UniqueIdentifier>{04b4026d-d0b0-4dd3-b153-dbc61fb7097a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 View">
+      <UniqueIdentifier>{29d9daab-f6bf-4640-b73f-783e91bc46dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu">
+      <UniqueIdentifier>{1518fa9e-aec9-43a8-a1db-a73293a0142d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab">
+      <UniqueIdentifier>{1907e7ae-365f-4013-a252-74773b4bd978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\01 Popup">
+      <UniqueIdentifier>{eab1ec30-d19b-45a1-9892-c91ef664740d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\01 Popup\00 Animation">
+      <UniqueIdentifier>{f40a2a4c-2fd3-48f1-b3f5-ea15b54790d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\01 Popup\01 MapRenderer">
+      <UniqueIdentifier>{88c001bc-16d3-466f-a30a-6b0ea64c74b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\01 Popup\02 PathExtract">
+      <UniqueIdentifier>{0a568416-6ee1-49eb-bfc5-00b6e5063743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab\01 Scene">
+      <UniqueIdentifier>{5b8b4817-3f7d-4c39-a84c-ae44196f4d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab\02 Object">
+      <UniqueIdentifier>{16475509-eaa0-4040-8fa0-053c120567f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab\00 Main">
+      <UniqueIdentifier>{c2b4f10c-a512-4e2d-b006-64c93b39f250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj">
+      <UniqueIdentifier>{393d1518-9339-4190-82ff-710d0c9e7f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer">
+      <UniqueIdentifier>{d2d7c8a9-e91e-487b-aa10-a4729d73c589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer\Scene">
+      <UniqueIdentifier>{97801698-5be3-4eeb-abf5-e144ed1435eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer\Scene\MapLayer">
+      <UniqueIdentifier>{22227b2e-9b16-4bc5-971a-471b0ec3d066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\01 AnimationContainer">
+      <UniqueIdentifier>{60ea8959-4feb-4394-a002-585465e662ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\01 AnimationContainer\Animation">
+      <UniqueIdentifier>{b3be427b-0c43-49ed-bdc9-55737c01569a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06 Project">
+      <UniqueIdentifier>{f16635b4-b5aa-49c0-a4d6-af78fca06541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager">
+      <UniqueIdentifier>{cb95eedd-9b89-4282-87f1-047fe1295bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\00 TimeManager">
+      <UniqueIdentifier>{fb6cf056-3067-4f65-9fd4-b3337da88404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\01 KeyManager">
+      <UniqueIdentifier>{65947e1d-80bc-46a6-a3e6-2b03aab3b9f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\99 SoundManager">
+      <UniqueIdentifier>{75b70f4d-af05-4ad3-872f-39a5ed3269bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab\00 Main\SoundList">
+      <UniqueIdentifier>{72faacbd-7ddf-4b5f-a4f5-bc668a303d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 ToolMenu\00 Tab\01 Scene\SceneInfo">
+      <UniqueIdentifier>{b64b2f91-2906-47a8-8f91-93b8e5672169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\02 ResourceManager">
+      <UniqueIdentifier>{0b160091-6a6d-4674-b292-c36ae78491ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\02 ResourceManager\Bitmap">
+      <UniqueIdentifier>{239994e5-fd94-4fa1-bfde-0807b45f01de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\03 ScrollManager">
+      <UniqueIdentifier>{c609cc92-a1c5-414e-b595-2f5f7437a387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer\Grid">
+      <UniqueIdentifier>{ec639c24-c56a-4907-bbe8-742035e1a3c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tool.h">
+      <Filter>00 WinApp</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolDoc.h">
+      <Filter>01 Document</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>02 MainFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolView.h">
+      <Filter>03 View</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>99 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolMenu.h">
+      <Filter>04 ToolMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneDialog.h">
+      <Filter>04 ToolMenu\00 Tab\01 Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectDialog.h">
+      <Filter>04 ToolMenu\00 Tab\02 Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationDialog.h">
+      <Filter>04 ToolMenu\01 Popup\00 Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CMapRenderDialog.h">
+      <Filter>04 ToolMenu\01 Popup\01 MapRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CPathExtractDialog.h">
+      <Filter>04 ToolMenu\01 Popup\02 PathExtract</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainDialog.h">
+      <Filter>04 ToolMenu\00 Tab\00 Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CProject.h">
+      <Filter>06 Project</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationContainer.h">
+      <Filter>05 GameObj\01 AnimationContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>05 GameObj\01 AnimationContainer\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CMapLayer.h">
+      <Filter>05 GameObj\00 SceneContainer\Scene\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>05 GameObj\00 SceneContainer\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObj.h">
+      <Filter>05 GameObj</Filter>
+    </ClInclude>
+    <ClInclude Include="CKeyManager.h">
+      <Filter>98 Manager\01 KeyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundManager.h">
+      <Filter>98 Manager\99 SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundList.h">
+      <Filter>04 ToolMenu\00 Tab\00 Main\SoundList</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneInfoDialog.h">
+      <Filter>04 ToolMenu\00 Tab\01 Scene\SceneInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeManager.h">
+      <Filter>98 Manager\00 TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSingleBitmap.h">
+      <Filter>98 Manager\02 ResourceManager\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="CResourceManager.h">
+      <Filter>98 Manager\02 ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CScrollManager.h">
+      <Filter>98 Manager\03 ScrollManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CGrid.h">
+      <Filter>05 GameObj\00 SceneContainer\Grid</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tool.cpp">
+      <Filter>00 WinApp</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolDoc.cpp">
+      <Filter>01 Document</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>02 MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolView.cpp">
+      <Filter>03 View</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>99 Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolMenu.cpp">
+      <Filter>04 ToolMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneDialog.cpp">
+      <Filter>04 ToolMenu\00 Tab\01 Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectDialog.cpp">
+      <Filter>04 ToolMenu\00 Tab\02 Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationDialog.cpp">
+      <Filter>04 ToolMenu\01 Popup\00 Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapRenderDialog.cpp">
+      <Filter>04 ToolMenu\01 Popup\01 MapRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CPathExtractDialog.cpp">
+      <Filter>04 ToolMenu\01 Popup\02 PathExtract</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDialog.cpp">
+      <Filter>04 ToolMenu\00 Tab\00 Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CProject.cpp">
+      <Filter>06 Project</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationContainer.cpp">
+      <Filter>05 GameObj\01 AnimationContainer</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>05 GameObj\01 AnimationContainer\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapLayer.cpp">
+      <Filter>05 GameObj\00 SceneContainer\Scene\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>05 GameObj\00 SceneContainer\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObj.cpp">
+      <Filter>05 GameObj</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyManager.cpp">
+      <Filter>98 Manager\01 KeyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundManager.cpp">
+      <Filter>98 Manager\99 SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundList.cpp">
+      <Filter>04 ToolMenu\00 Tab\00 Main\SoundList</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneInfoDialog.cpp">
+      <Filter>04 ToolMenu\00 Tab\01 Scene\SceneInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeManager.cpp">
+      <Filter>98 Manager\00 TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSingleBitmap.cpp">
+      <Filter>98 Manager\02 ResourceManager\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="CResourceManager.cpp">
+      <Filter>98 Manager\02 ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CScrollManager.cpp">
+      <Filter>98 Manager\03 ScrollManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CGrid.cpp">
+      <Filter>05 GameObj\00 SceneContainer\Grid</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Tool.ico">
+      <Filter>99 Default</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>99 Default</Filter>
+    </Image>
+    <Image Include="res\ToolDoc.ico">
+      <Filter>99 Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Tool.rc">
+      <Filter>99 Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Tool.rc2">
+      <Filter>99 Default</Filter>
+    </None>
+  </ItemGroup>
+</Project>
