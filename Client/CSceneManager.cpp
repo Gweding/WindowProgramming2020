@@ -2,7 +2,7 @@
 #include "CSceneManager.h"
 #include "CScene.h"
 
-#include "CScene_Stage.h"
+#include "CScene_TestStage.h"
 
 IMPLEMENT_SINGLETON(CSceneManager)
 
@@ -39,7 +39,7 @@ HRESULT CSceneManager::Change_Scene(SCENE_ID eID)
 		switch (m_eNextScene)
 		{
 		case CSceneManager::SCENE_TESTSTAGE:
-			m_pScene = CScene_Stage::Create();
+			m_pScene = CScene_TestStage::Create();
 			break;
 		default:
 			break;

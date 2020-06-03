@@ -165,7 +165,8 @@
     <ClInclude Include="CResourceManager.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneManager.h" />
-    <ClInclude Include="CScene_Stage.h" />
+    <ClInclude Include="CScene_TestStage.h" />
+    <ClInclude Include="CTest.h" />
     <ClInclude Include="CTimeManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Resource.h" />
@@ -184,7 +185,8 @@
     <ClCompile Include="CResourceManager.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneManager.cpp" />
-    <ClCompile Include="CScene_Stage.cpp" />
+    <ClCompile Include="CScene_TestStage.cpp" />
+    <ClCompile Include="CTest.cpp" />
     <ClCompile Include="CTimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>

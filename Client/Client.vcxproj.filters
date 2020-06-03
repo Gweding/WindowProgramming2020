@@ -46,6 +46,9 @@
     <Filter Include="02 Scene\99 TestStage">
       <UniqueIdentifier>{a166a380-c2b7-4cb1-85aa-ceb6cde74688}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01 GameObj\test">
+      <UniqueIdentifier>{0585124d-eb93-415c-ab64-2d3fa95b1bcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -93,11 +96,14 @@
     <ClInclude Include="CKeyManager.h">
       <Filter>98 Manager\01 KeyManager</Filter>
     </ClInclude>
-    <ClInclude Include="CScene_Stage.h">
-      <Filter>02 Scene\99 TestStage</Filter>
-    </ClInclude>
     <ClInclude Include="CResourceManager.h">
       <Filter>98 Manager\05 ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_TestStage.h">
+      <Filter>02 Scene\99 TestStage</Filter>
+    </ClInclude>
+    <ClInclude Include="CTest.h">
+      <Filter>01 GameObj\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -150,11 +156,14 @@
     <ClCompile Include="CKeyManager.cpp">
       <Filter>98 Manager\01 KeyManager</Filter>
     </ClCompile>
-    <ClCompile Include="CScene_Stage.cpp">
-      <Filter>02 Scene\99 TestStage</Filter>
-    </ClCompile>
     <ClCompile Include="CResourceManager.cpp">
       <Filter>98 Manager\05 ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_TestStage.cpp">
+      <Filter>02 Scene\99 TestStage</Filter>
+    </ClCompile>
+    <ClCompile Include="CTest.cpp">
+      <Filter>01 GameObj\test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

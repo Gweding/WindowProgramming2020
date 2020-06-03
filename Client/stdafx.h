@@ -19,6 +19,8 @@
 #pragma comment (lib,"Gdiplus.lib")
 using namespace Gdiplus;
 
+#include <atlimage.h>
+
 #include "Define.h"
 
 #include "CKeyManager.h"
