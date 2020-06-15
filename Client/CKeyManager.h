@@ -12,12 +12,6 @@ const DWORD KEY_ENTER = 0x00000040;
 
 const DWORD KEY_SPACE = 0x00000080;
 const DWORD KEY_TAB = 0x00000100;
-const DWORD KEY_A;
-const DWORD KEY_S;
-const DWORD KEY_D;
-const DWORD KEY_Z;
-const DWORD KEY_X;
-const DWORD KEY_C;
 
 
 class CKeyManager
