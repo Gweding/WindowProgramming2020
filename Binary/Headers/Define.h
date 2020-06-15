@@ -51,7 +51,7 @@ using namespace chrono;
 #define MAX_STR 256
 
 #define PI 3.141592f;
-
+#define MAX_VKEY 0xff
 // Default
 
 #define OBJ_NOEVENT 0
