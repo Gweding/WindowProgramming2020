@@ -17,6 +17,13 @@ CToolMenu::CToolMenu()
 
 CToolMenu::~CToolMenu()
 {
+	m_pMain->DestroyWindow();
+	m_pScene->DestroyWindow();
+	//m_pObject->DestroyWindow();
+
+	//SafeDelete(m_pMain);
+	//SafeDelete(m_pScene);
+	//SafeDelete(m_pObject);
 }
 
 void CToolMenu::DoDataExchange(CDataExchange* pDX)
@@ -60,7 +67,7 @@ void CToolMenu::OnInitialUpdate()
 
 	m_TabCtrl.InsertItem(0, L"MAIN");
 	m_TabCtrl.InsertItem(1, L"SCENE");
-	m_TabCtrl.InsertItem(2, L"OBJECT");
+	//m_TabCtrl.InsertItem(2, L"OBJECT");
 
 	m_TabCtrl.SetCurSel(0);
 
@@ -75,9 +82,9 @@ void CToolMenu::OnInitialUpdate()
 	m_pScene->Create(IDD_SceneDialog, &m_TabCtrl);
 	m_pScene->MoveWindow(0, 25, rect.Width(), rect.Height());
 
-	m_pObject = new CObjectDialog;
-	m_pObject->Create(IDD_ObjectDialog, &m_TabCtrl);
-	m_pObject->MoveWindow(0, 25, rect.Width(), rect.Height());
+	//m_pObject = new CObjectDialog;
+	//m_pObject->Create(IDD_ObjectDialog, &m_TabCtrl);
+	//m_pObject->MoveWindow(0, 25, rect.Width(), rect.Height());
 
 	m_pMain->ShowWindow(SW_SHOW);
 	m_pWnd = m_pMain;

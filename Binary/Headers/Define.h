@@ -23,6 +23,9 @@
 using namespace std;
 using namespace chrono;
 
+// CImage
+#include <atlimage.h>
+
 // FMOD (Sound Library)
 #include <io.h>
 #include "fmod.h"

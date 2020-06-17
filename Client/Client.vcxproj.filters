@@ -40,14 +40,14 @@
     <Filter Include="98 Manager\05 ResourceManager">
       <UniqueIdentifier>{974f1cf2-543d-4006-bf52-e6e74457eaa8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="98 Manager\05 ResourceManager\Bitmap">
-      <UniqueIdentifier>{9092ba19-3d27-473a-9337-1dd033d76f08}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02 Scene\99 TestStage">
       <UniqueIdentifier>{a166a380-c2b7-4cb1-85aa-ceb6cde74688}</UniqueIdentifier>
     </Filter>
     <Filter Include="01 GameObj\test">
       <UniqueIdentifier>{0585124d-eb93-415c-ab64-2d3fa95b1bcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\05 ResourceManager\Bitmap">
+      <UniqueIdentifier>{e12a8cd9-1366-4875-bb30-ebbfd7d07d64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +90,6 @@
     <ClInclude Include="CSceneManager.h">
       <Filter>98 Manager\97 SceneManager</Filter>
     </ClInclude>
-    <ClInclude Include="CBitmap.h">
-      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
-    </ClInclude>
     <ClInclude Include="CKeyManager.h">
       <Filter>98 Manager\01 KeyManager</Filter>
     </ClInclude>
@@ -104,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="CTest.h">
       <Filter>01 GameObj\test</Filter>
+    </ClInclude>
+    <ClInclude Include="CBitmap.h">
+      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -150,9 +150,6 @@
     <ClCompile Include="CSceneManager.cpp">
       <Filter>98 Manager\97 SceneManager</Filter>
     </ClCompile>
-    <ClCompile Include="CBitmap.cpp">
-      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
-    </ClCompile>
     <ClCompile Include="CKeyManager.cpp">
       <Filter>98 Manager\01 KeyManager</Filter>
     </ClCompile>
@@ -164,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="CTest.cpp">
       <Filter>01 GameObj\test</Filter>
+    </ClCompile>
+    <ClCompile Include="CBitmap.cpp">
+      <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

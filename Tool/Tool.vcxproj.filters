@@ -55,12 +55,6 @@
     <Filter Include="05 GameObj\00 SceneContainer\Scene\MapLayer">
       <UniqueIdentifier>{22227b2e-9b16-4bc5-971a-471b0ec3d066}</UniqueIdentifier>
     </Filter>
-    <Filter Include="05 GameObj\01 AnimationContainer">
-      <UniqueIdentifier>{60ea8959-4feb-4394-a002-585465e662ad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05 GameObj\01 AnimationContainer\Animation">
-      <UniqueIdentifier>{b3be427b-0c43-49ed-bdc9-55737c01569a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="06 Project">
       <UniqueIdentifier>{f16635b4-b5aa-49c0-a4d6-af78fca06541}</UniqueIdentifier>
     </Filter>
@@ -93,6 +87,15 @@
     </Filter>
     <Filter Include="05 GameObj\00 SceneContainer\Grid">
       <UniqueIdentifier>{ec639c24-c56a-4907-bbe8-742035e1a3c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer\Scene\Tile">
+      <UniqueIdentifier>{b77b377d-1dfd-4c0a-9d6f-af9f788052d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\01 Animation">
+      <UniqueIdentifier>{60ea8959-4feb-4394-a002-585465e662ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 GameObj\00 SceneContainer\Pallete">
+      <UniqueIdentifier>{dd5de830-cd7f-4332-8784-a04f1b08424b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -144,12 +147,6 @@
     <ClInclude Include="CProject.h">
       <Filter>06 Project</Filter>
     </ClInclude>
-    <ClInclude Include="CAnimationContainer.h">
-      <Filter>05 GameObj\01 AnimationContainer</Filter>
-    </ClInclude>
-    <ClInclude Include="CAnimation.h">
-      <Filter>05 GameObj\01 AnimationContainer\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="CMapLayer.h">
       <Filter>05 GameObj\00 SceneContainer\Scene\MapLayer</Filter>
     </ClInclude>
@@ -185,6 +182,15 @@
     </ClInclude>
     <ClInclude Include="CGrid.h">
       <Filter>05 GameObj\00 SceneContainer\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="CTile.h">
+      <Filter>05 GameObj\00 SceneContainer\Scene\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="CPallete.h">
+      <Filter>05 GameObj\00 SceneContainer\Pallete</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>05 GameObj\01 Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -227,12 +233,6 @@
     <ClCompile Include="CProject.cpp">
       <Filter>06 Project</Filter>
     </ClCompile>
-    <ClCompile Include="CAnimationContainer.cpp">
-      <Filter>05 GameObj\01 AnimationContainer</Filter>
-    </ClCompile>
-    <ClCompile Include="CAnimation.cpp">
-      <Filter>05 GameObj\01 AnimationContainer\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="CMapLayer.cpp">
       <Filter>05 GameObj\00 SceneContainer\Scene\MapLayer</Filter>
     </ClCompile>
@@ -268,6 +268,15 @@
     </ClCompile>
     <ClCompile Include="CGrid.cpp">
       <Filter>05 GameObj\00 SceneContainer\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="CTile.cpp">
+      <Filter>05 GameObj\00 SceneContainer\Scene\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="CPallete.cpp">
+      <Filter>05 GameObj\00 SceneContainer\Pallete</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>05 GameObj\01 Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

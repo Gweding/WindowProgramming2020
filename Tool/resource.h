@@ -35,6 +35,10 @@
 #define IDC_BUTTON18                    1013
 #define IDC_BUTTON19                    1014
 #define IDC_BUTTON20                    1015
+#define IDC_BUTTON21                    1016
+#define IDC_BUTTON22                    1017
+#define IDC_BUTTON23                    1018
+#define IDC_BUTTON24                    1019
 #define IDC_BUTTON12                    1024
 #define IDC_BUTTON13                    1025
 #define IDC_SLIDER2                     1026
@@ -45,28 +49,27 @@
 #define IDC_SOUNDPLAYER                 1033
 #define IDC_LIST1                       1034
 #define IDC_LIST2                       1035
-#define IDC_RADIO1                      1036
-#define IDC_RADIO2                      1037
 #define IDC_EDIT1                       1038
 #define IDC_LIST3                       1039
 #define IDC_EDIT2                       1039
-#define IDC_RADIO3                      1040
 #define IDC_EDIT4                       1040
-#define IDC_RADIO4                      1041
-#define IDC_RADIO5                      1042
 #define IDC_EDIT5                       1043
 #define IDC_COMBO1                      1044
 #define IDC_TILEPALLETE                 1045
 #define IDC_EDIT6                       1046
 #define IDC_EDIT7                       1047
+#define IDC_EDIT8                       1048
+#define IDC_PIC                         1048
+#define IDC_EDIT9                       1049
+#define IDC_COMBO2                      1050
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        316
+#define _APS_NEXT_RESOURCE_VALUE        321
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1047
+#define _APS_NEXT_CONTROL_VALUE         1050
 #define _APS_NEXT_SYMED_VALUE           319
 #endif
 #endif

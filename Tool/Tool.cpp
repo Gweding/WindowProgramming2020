@@ -213,14 +213,12 @@ BOOL CToolApp::OnIdle(LONG lCount)
 		return FALSE;
 	else
 	{
-		if (m_pTimeMgr->FrameLimit(60.f))
-		{
-			m_fTimeDelta = m_pTimeMgr->GetDelta();
-			m_pProject->Update_Project(m_fTimeDelta);
-			m_pProject->Render_Project(m_hDC);
-			m_fTimeCnt += m_fTimeDelta;
-			++m_iFPS;
-		}
+		m_pTimeMgr->UpdateTime();
+		m_fTimeDelta = m_pTimeMgr->GetDelta();
+		m_pProject->Update_Project(m_fTimeDelta);
+		m_pProject->Render_Project(m_hDC);
+		m_fTimeCnt += m_fTimeDelta;
+		++m_iFPS;
 
 		if ( m_fTimeCnt >= 1.f )
 		{
@@ -233,3 +231,5 @@ BOOL CToolApp::OnIdle(LONG lCount)
 
 	return TRUE;
 }
+
+

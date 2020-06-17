@@ -98,14 +98,14 @@ void CMainDialog::OnBnClicked_OpenPathExtract()
 void CMainDialog::OnBnClicked_OpenAnimation()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	m_PathExtract.ShowWindow(SW_SHOW);
+	m_Animation.ShowWindow(SW_SHOW);
 }
 
 
 void CMainDialog::OnBnClicked_OpenMapRender()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	m_Animation.ShowWindow(SW_SHOW);
+	m_MapRender.ShowWindow(SW_SHOW);
 }
 
 

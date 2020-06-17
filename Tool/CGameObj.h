@@ -12,6 +12,13 @@ public:
 	virtual void			Render_GameObj(HDC hdc);
 
 protected:
+	void							Update_Rect();
+
+public:
+	INFO						m_tInfo;
+	RECT						m_tRect;
+
+protected:
 	CKeyManager* m_pKeyMgr;
 	CTimeManager* m_pTimeMgr;
 	CSoundManager* m_pSoundMgr;

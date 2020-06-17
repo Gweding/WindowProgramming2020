@@ -1,24 +1,35 @@
 #pragma once
+
 class CTimeManager
 {
 	DECLARE_SINGLETON(CTimeManager)
 
-private:
-	CTimeManager();
+public:
+	explicit CTimeManager();
 	~CTimeManager();
 
 public:
-	float GetTime() { return m_fTime; }
+	const float& GetDelta() const;
 
 public:
-	void InitTime();
 	void UpdateTime();
+	bool FrameLimit(float fLimit);
+
+public:
+	void Free();
 
 private:
+	// Delta Time
 	LARGE_INTEGER	m_CurTime;
-	LARGE_INTEGER	m_OldTime1;
-	LARGE_INTEGER	m_OldTime2;
+	LARGE_INTEGER	m_OldTime;
 	LARGE_INTEGER	m_CpuTick;
+	float			m_fDeltaTime;
 
-	float			m_fTime;
+private:
+	// Frame Limit
+	LARGE_INTEGER	m_FrameCurTime;
+	LARGE_INTEGER	m_FrameOldTime;
+	LARGE_INTEGER	m_FrameCpuTick;
+	float			m_fTimeCount;
 };
+

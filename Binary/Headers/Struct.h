@@ -29,15 +29,64 @@ typedef struct tagInfo
 	float cy;
 }INFO;
 
+//typedef struct tagFrame
+//{
+//	tagFrame() {}
+//	tagFrame(float _fCurFrame, float _fFrameCnt, float _fSpeed)
+//		: fCurFrame(_fCurFrame), fFrameCnt(_fFrameCnt), fFrameSpeed(_fSpeed)
+//	{}
+//
+//	float fCurFrame;
+//	float fFrameCnt;
+//	float fFrameSpeed;
+//}FRAME;
+
+typedef struct tagImage
+{
+	wstring strImageTag;
+	wstring strRelativePath;
+}IMAGE;
+
+enum COLL_TYPE { COLL_ALL, COLL_JUMP, COLL_INTERACT, COLL_END };
+typedef struct tagCollRect
+{
+	COLL_TYPE iType;
+	RECT tRect;
+}COLL_RECT;
+
 typedef struct tagFrame
 {
 	tagFrame() {}
-	tagFrame(float _fCurFrame, float _fFrameCnt, float _fSpeed)
-		: fCurFrame(_fCurFrame), fFrameCnt(_fFrameCnt), fFrameSpeed(_fSpeed)
+	tagFrame(wstring Tag, float Speed, float fX, float fY, float fCX, float fCY)
+		: strTag(Tag), fSpeed(Speed), x(fX), y(fY), cx(fCX), cy(fCY)
 	{}
 
-	float fCurFrame;
-	float fFrameCnt;
-	float fFrameSpeed;
+	float x;
+	float y;
+	float cx;
+	float cy;
+	RECT tRect;
+	float fSpeed;
+	wstring strTag;
+	wstring strPath;
+	RECT tCollRect;
 }FRAME;
 
+typedef struct tagTile
+{
+	tagTile() {}
+	tagTile(wstring tag, RECT rect)
+		: strTag(tag), tRect(rect)
+	{}
+
+	// 중심
+	float x;
+	float y;
+	// 크기
+	float cx;
+	float cy;
+	// 타일 정보
+	RECT tRect;
+	wstring strTag;
+	wstring strPath;
+}TILE;

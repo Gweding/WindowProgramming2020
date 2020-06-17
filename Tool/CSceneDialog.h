@@ -29,50 +29,62 @@ public:
 
 public:
 	// Scene
-	afx_msg void OnBnClicked_AddSceneBGM();
-	afx_msg void OnBnClicked_ViewSceneInfo();
+	afx_msg void OnBnClicked_HideLayer();
 	afx_msg void OnBnClicked_AddLayer();
 	afx_msg void OnBnClicked_DeleteLayer();
-	afx_msg void OnBnClicked_HideLayer();
+	afx_msg void OnBnClicked_AdjustLayer();
+	afx_msg void OnLbnSelchange_LayerList();
+	afx_msg void OnCbnSelchange_LayerType();
 
 public:
+	afx_msg void OnBnClicked_LayerUp();
+	afx_msg void OnBnClicked_LayerDown();
 	afx_msg void OnBnClicked_LoadBackImage();
-	afx_msg void OnBnClicked_AdjustBackSpeed();
-	afx_msg void OnBnClicked_LayerBack();
-	afx_msg void OnBnClicked_LayerTile();
-	afx_msg void OnBnClicked_AdjustGrid();
+
+public:
 	afx_msg void OnBnClicked_AddTile();
+	afx_msg void OnBnClicked_AdjustGrid();
 
 public:
 	afx_msg void OnBnClicked_DeleteCollision();
-	afx_msg void OnBnClicked_ChangeCollision();
 
 public:
-	afx_msg void OnLbnSelchange_LayerList();
 	afx_msg void OnLbnSelchange_CollList();
+	afx_msg void OnCbnSelchange_CollType();
+
+	// Pallete
+public:
+	afx_msg void OnBnClicked_ClearPallete();
+	afx_msg void OnBnClicked_SavePallete();
+	afx_msg void OnBnClicked_LoadPallete();
+
+public:
+	afx_msg void OnBnClicked_SaveScene();
+	afx_msg void OnBnClicked_LoadScene();
+
+public:
+	void Set_TileLayer_Option(bool bIsTile);
 
 public:
 	CScene* m_pCurrScene;
-	CMapLayer* m_pCurrLayer;
-
-public:
-	CSoundList m_SoundList;
-	CSceneInfoDialog m_SceneInfo;
 
 public:
 	CListBox m_LayerListbox;
-	CString m_strLayerTag;
 
 public:
 	CStatic m_TilePicCtrl;
-	CButton m_LayerType[LAYER_END];
+
+public:
+	CString m_strLayerTag;
 	CString m_strBackImage;
 	UINT m_iGridX;
 	UINT m_iGridY;
+	CComboBox m_LayerTypeCombo;
 	float m_fBackSpeed;
+	float m_fSizeX;
+	float m_fSizeY;
 
 public:
 	CListBox m_CollListbox;
-	CButton m_CollType[COLL_END];
-	CComboBox m_InteractCombo;
+	CComboBox m_CollTypeCombo;
 };

@@ -190,7 +190,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CAnimation.h" />
-    <ClInclude Include="CAnimationContainer.h" />
     <ClInclude Include="CAnimationDialog.h" />
     <ClInclude Include="CGameObj.h" />
     <ClInclude Include="CGrid.h" />
@@ -199,6 +198,7 @@
     <ClInclude Include="CMapLayer.h" />
     <ClInclude Include="CMapRenderDialog.h" />
     <ClInclude Include="CObjectDialog.h" />
+    <ClInclude Include="CPallete.h" />
     <ClInclude Include="CPathExtractDialog.h" />
     <ClInclude Include="CProject.h" />
     <ClInclude Include="CResourceManager.h" />
@@ -209,6 +209,7 @@
     <ClInclude Include="CSingleBitmap.h" />
     <ClInclude Include="CSoundList.h" />
     <ClInclude Include="CSoundManager.h" />
+    <ClInclude Include="CTile.h" />
     <ClInclude Include="CTimeManager.h" />
     <ClInclude Include="CToolMenu.h" />
     <ClInclude Include="framework.h" />
@@ -222,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAnimation.cpp" />
-    <ClCompile Include="CAnimationContainer.cpp" />
     <ClCompile Include="CAnimationDialog.cpp" />
     <ClCompile Include="CGameObj.cpp" />
     <ClCompile Include="CGrid.cpp" />
@@ -231,6 +231,7 @@
     <ClCompile Include="CMapLayer.cpp" />
     <ClCompile Include="CMapRenderDialog.cpp" />
     <ClCompile Include="CObjectDialog.cpp" />
+    <ClCompile Include="CPallete.cpp" />
     <ClCompile Include="CPathExtractDialog.cpp" />
     <ClCompile Include="CProject.cpp" />
     <ClCompile Include="CResourceManager.cpp" />
@@ -241,6 +242,7 @@
     <ClCompile Include="CSingleBitmap.cpp" />
     <ClCompile Include="CSoundList.cpp" />
     <ClCompile Include="CSoundManager.cpp" />
+    <ClCompile Include="CTile.cpp" />
     <ClCompile Include="CTimeManager.cpp" />
     <ClCompile Include="CToolMenu.cpp" />
     <ClCompile Include="MainFrm.cpp" />

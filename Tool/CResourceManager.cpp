@@ -12,17 +12,6 @@ CResourceManager::~CResourceManager()
 {
 }
 
-HRESULT CResourceManager::Ready_ResourceManager()
-{
-	GdiplusStartupInput tGdiplusStartup; if (::GdiplusStartup(&m_pGdiPlusTokenData, &tGdiplusStartup, NULL) != Ok) 
-	{ 
-		AfxMessageBox(_T("ERROR:Faield to initialize GDI+ library"));
-		return E_FAIL; 
-	}
-
-	return NOERROR;
-}
-
 HDC CResourceManager::Find_Bmp(wstring strImgKey)
 {
 	auto iter = m_mapBmp.find(strImgKey);
@@ -33,7 +22,7 @@ HDC CResourceManager::Find_Bmp(wstring strImgKey)
 	return iter->second->Get_MemDC();
 }
 
-Image* CResourceManager::Find_Sprite(wstring strImgKey)
+CImage* CResourceManager::Find_Sprite(wstring strImgKey)
 {
 	auto iter = m_mapSprite.find(strImgKey);
 
@@ -64,8 +53,8 @@ HRESULT CResourceManager::Load_Sprite(wstring strFilePath, wstring strImgKey)
 
 	if (iter == m_mapSprite.end())
 	{
-		Image* pImage = Image::FromFile(strFilePath.c_str());
-		if (pImage == nullptr)
+		CImage* pImage = new CImage;
+		if (FAILED(pImage->Load(strFilePath.c_str())))
 			return E_FAIL;
 		m_mapSprite.emplace(strImgKey, pImage);
 	}
@@ -100,8 +89,9 @@ void CResourceManager::Free()
 	m_mapBmp.clear();
 
 	for (auto& iter : m_mapSprite)
+	{
+		iter.second->ReleaseDC();
 		SafeDelete(iter.second);
+	}
 	m_mapSprite.clear();
-
-	GdiplusShutdown(m_pGdiPlusTokenData);
 }

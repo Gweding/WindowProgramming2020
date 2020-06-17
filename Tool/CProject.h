@@ -1,6 +1,7 @@
 #pragma once
 #include "CGameObj.h"
 #include "CScene.h"
+#include "CAnimation.h"
 
 class CProject
 {
@@ -18,12 +19,20 @@ public:
 
 public:
 	CScene* m_pScene;
+	CAnimation* m_pAnimation;
+
+public:
+	HWND m_AnimationHwnd;
 
 private:
 	CKeyManager* m_pKeyMgr;
 	CTimeManager* m_pTimeMgr;
 	CSoundManager* m_pSoundMgr;
 	CResourceManager* m_pResourceMgr;
+
+private:
+	// For Gdi+
+	ULONG_PTR m_pGdiPlusTokenData;
 
 public:
 	static CProject*	Create();

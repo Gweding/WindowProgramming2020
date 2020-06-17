@@ -29,7 +29,7 @@ HRESULT CScene_TestStage::Ready_Scene()
 		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
 	}
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < 5; ++i)
 	{
 		pObj = CTest::Create(200 + 10 * i, 200 + 10 * i, L"../Binary/Resources/01 #17449.png");
 		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);

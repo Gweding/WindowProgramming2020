@@ -19,7 +19,6 @@ CMainApp* g_pMainApp = nullptr;
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
-INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -51,12 +50,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     if (nullptr == g_pMainApp)
         return 0;
 
-    DWORD   dwOldTime = GetTickCount();
-
-    TCHAR   szFPS[32] = L"";
-    int     iFPS = 0;
-    DWORD   dwFPSTime = GetTickCount() - 1000;
     CTimeManager* pTimeManager = CTimeManager::GetInstance();
+    TCHAR   szFPS[32] = L"";
+    float		fTimeCnt = 0.f;
+    float		fTimeDelta = 0.f;
+    int			iFPS = 0;
 
     // 기본 메시지 루프입니다:
     while (msg.message != WM_QUIT)
@@ -71,24 +69,31 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
         else
         {
-            if (dwOldTime + 10 <= GetTickCount())
+#ifdef _DEBUG
+            pTimeManager->UpdateTime();
+            fTimeDelta = pTimeManager->GetDelta();
+            g_pMainApp->Update_MainApp(fTimeDelta);
+            g_pMainApp->Render_MainApp();
+            fTimeCnt += fTimeDelta;
+            ++iFPS;
+#else
+            if (pTimeManager->FrameLimit(60.f))
             {
                 pTimeManager->UpdateTime();
-
-                g_pMainApp->Update_MainApp(pTimeManager->GetTime());
+                fTimeDelta = pTimeManager->GetDelta();
+                g_pMainApp->Update_MainApp(fTimeDelta);
                 g_pMainApp->Render_MainApp();
+                fTimeCnt += fTimeDelta;
                 ++iFPS;
-
-                dwOldTime = GetTickCount();
             }
+#endif
 
-            if (dwFPSTime + 1000 < GetTickCount())
+            if (fTimeCnt >= 1.f)
             {
-                swprintf_s(szFPS, L"FPS : %d", iFPS);
+                swprintf_s(szFPS, L"FPS: %d", iFPS);
                 SetWindowText(g_hWnd, szFPS);
-
                 iFPS = 0;
-                dwFPSTime = GetTickCount();
+                fTimeCnt = 0.f;
             }
         }
     }
@@ -182,14 +187,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         if (wParam == VK_ESCAPE)
             DestroyWindow(hWnd);
         break;
-    //case WM_PAINT:
-    //    {
-    //        PAINTSTRUCT ps;
-    //        HDC hdc = BeginPaint(hWnd, &ps);
-    //        // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
-    //        EndPaint(hWnd, &ps);
-    //    }
-    //    break;
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
@@ -197,24 +194,4 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         return DefWindowProc(hWnd, message, wParam, lParam);
     }
     return 0;
-}
-
-// 정보 대화 상자의 메시지 처리기입니다.
-INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
-{
-    UNREFERENCED_PARAMETER(lParam);
-    switch (message)
-    {
-    case WM_INITDIALOG:
-        return (INT_PTR)TRUE;
-
-    case WM_COMMAND:
-        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-        {
-            EndDialog(hDlg, LOWORD(wParam));
-            return (INT_PTR)TRUE;
-        }
-        break;
-    }
-    return (INT_PTR)FALSE;
 }

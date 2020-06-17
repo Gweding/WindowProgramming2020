@@ -14,12 +14,11 @@
 #include <memory.h>
 #include <tchar.h>
 
-#include <ole2.h>
-#include <gdiplus.h>
-#pragma comment (lib,"Gdiplus.lib")
-using namespace Gdiplus;
+#include <Ole2.h>
 
-#include <atlimage.h>
+#include <gdiplus.h>
+#pragma comment (lib, "gdiplus")
+using namespace Gdiplus;
 
 #include "Define.h"
 
