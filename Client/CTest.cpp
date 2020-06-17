@@ -36,6 +36,11 @@ int CTest::Update_GameObj(const float& fTimeDelta)
 	if (m_pKeyMgr->KeyPressing(KEY_LEFT))
 		m_tInfo.x -= fTimeDelta * 100.f;
 
+	if (m_pKeyMgr->KeyPressing(KEY_SPACE)) // 스페이스바를 누르면 대가리 교체
+		m_tInfo.x;
+
+
+
 	CGameObj::Update_Rect();
 	m_pRenderMgr->AddBack_RenderList(this);
 

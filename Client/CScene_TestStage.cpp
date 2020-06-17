@@ -16,26 +16,17 @@ HRESULT CScene_TestStage::Ready_Scene()
 {
 	CScene::Ready_Scene();
 	CGameObj* pObj = nullptr;
+	CGameObj* pObj1 = nullptr;
 
-	for (int i = 0; i < 5; ++i)
-	{
-		pObj = CTest::Create(10 * i, 10 * i, L"../Binary/Resources/Profile_-_Forky1.png");
-		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
-	}
+	pObj = CTest::Create(500 , 670 , L"../Binary/Resources/Player_Idle_Head00.png");
+	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
 
-	for (int i = 0; i < 5; ++i)
-	{
-		pObj = CTest::Create(50 + 10 * i, 50 + 10 * i, L"../Binary/Resources/01 #16038.png");
-		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
-	}
+	pObj1 = CTest::Create(1000, 670, L"../Binary/Resources/Idle_0 #20945.png");
+	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj1);	
 
-	for (int i = 0; i < 5; ++i)
-	{
-		pObj = CTest::Create(200 + 10 * i, 200 + 10 * i, L"../Binary/Resources/01 #17449.png");
-		m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
-	}
 
 	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Grid.png", L"TestStage_Back");
+
 
 	if (FAILED(m_pImage.Load(L"../Binary/Resources/Sprite/1 #16897.png")))
 		return E_FAIL;

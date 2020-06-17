@@ -18,6 +18,14 @@ void CKeyManager::UpdateKey()
 {
 	m_dwCurKey = 0;
 
+	for (int i = 0; i < MAX_VKEY; ++i)
+	{
+		if (m_dwCurKey && !(GetAsyncKeyState(i) & 0x8000))
+			m_dwCurKey = !m_dwCurKey;
+		if (!m_dwCurKey && (GetAsyncKeyState(i) & 0x8000))
+			m_dwCurKey = !m_dwCurKey;
+	}
+
 	if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 		m_dwCurKey |= KEY_LBUTTON;
 	if (GetAsyncKeyState(VK_RBUTTON) & 0x8000)
@@ -32,6 +40,14 @@ void CKeyManager::UpdateKey()
 		m_dwCurKey |= KEY_RIGHT;
 	if (GetAsyncKeyState(VK_RETURN) & 0x8000)
 		m_dwCurKey |= KEY_ENTER;
+
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+		m_dwCurKey |= KEY_SPACE;
+	if (GetAsyncKeyState(VK_TAB) & 0x8000)
+		m_dwCurKey |= KEY_TAB;
+
+
+
 }
 
 
