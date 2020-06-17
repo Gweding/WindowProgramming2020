@@ -15,10 +15,11 @@ HRESULT CMainApp::Ready_MainApp()
 	m_pSceneMgr = CSceneManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 
-	m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE);
+	m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOGO);
+	//m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE);
 
-	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Back");
-	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"MemDC");
+	m_pResourceMgr->Load_Bmp(L"Back", L"../../Binary/Resources/Back.bmp");
+	m_pResourceMgr->Load_Bmp(L"MemDC", L"../../Binary/Resources/Back2.bmp");
 
 	return S_OK;
 }
@@ -68,6 +69,10 @@ void CMainApp::Free()
 
 	CKeyManager::GetInstance()->DestroyInstance();
 	CTimeManager::GetInstance()->DestroyInstance();
+	CSceneManager::GetInstance()->DestroyInstance();
+
+	//
 	CGameManager::GetInstance()->DestroyInstance();
 	CRenderManager::GetInstance()->DestroyInstance();
+	CResourceManager::GetInstance()->DestroyInstance();
 }

@@ -14,8 +14,8 @@ public:
 	CImage* Find_Sprite(wstring strImgKey);
 
 public:
-	HRESULT Load_Bmp(wstring strFilePath, wstring strImgKey);
-	HRESULT Load_Sprite(wstring strFilePath, wstring strImgKey);
+	HRESULT Load_Bmp(wstring strImgKey, wstring strFilePath);
+	HRESULT Load_Sprite(wstring strImgKey, wstring strFilePath);
 
 public:
 	BOOL Check_Bmp(wstring strImgKey);

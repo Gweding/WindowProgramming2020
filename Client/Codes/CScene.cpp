@@ -13,6 +13,7 @@ HRESULT CScene::Ready_Scene()
 {
 	m_pKeyMgr = CKeyManager::GetInstance();
 	m_pGameMgr = CGameManager::GetInstance();
+	m_pSceneMgr = CSceneManager::GetInstance();
 	m_pRenderMgr = CRenderManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 

@@ -25,7 +25,7 @@ HRESULT CScene_TestStage::Ready_Scene()
 	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj1);	
 
 
-	m_pResourceMgr->Load_Sprite(L"../../Binary/Resources/Grid.png", L"TestStage_Back");
+	m_pResourceMgr->Load_Sprite(L"TestStage_Back", L"../../Binary/Resources/Grid.png");
 
 
 	if (FAILED(m_pImage.Load(L"../../Binary/Resources/Test/2.png")))
@@ -65,6 +65,6 @@ CScene_TestStage* CScene_TestStage::Create()
 
 void CScene_TestStage::Free()
 {
-	m_pImage.ReleaseDC();
+	m_pImage.Destroy();
 	m_pGameMgr->Reset_OBJLIST();
 }

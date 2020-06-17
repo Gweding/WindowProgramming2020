@@ -238,6 +238,8 @@ HRESULT CAnimation::Delete_Frame(int iIndex)
 
 	m_FrameList->DeleteString(iIndex);
 
+	m_fCurrFrame -= 1.f;
+
 	return NOERROR;
 }
 

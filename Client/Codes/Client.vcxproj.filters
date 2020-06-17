@@ -49,6 +49,45 @@
     <Filter Include="98 Manager\05 ResourceManager\Bitmap">
       <UniqueIdentifier>{e12a8cd9-1366-4875-bb30-ebbfd7d07d64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02 Scene\98 Loading">
+      <UniqueIdentifier>{98d91066-dfcd-4e72-ae7b-9c47c64bfc69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\06 AnimationManager">
+      <UniqueIdentifier>{22617815-656c-4388-b9bf-24bd06dd8610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\07 MapManager">
+      <UniqueIdentifier>{8f98d8d0-3a6a-4ae5-be42-6186aa2b9961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\99 Data">
+      <UniqueIdentifier>{0c74e9ce-57b4-4136-a705-11c41aa9762d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\99 Data\00 Animation">
+      <UniqueIdentifier>{36439d5e-9aaf-479f-9ae0-5238a77dcc12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\99 Data\01 Map">
+      <UniqueIdentifier>{2f8c7e0f-5f7a-4cae-bcc5-75186da08f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\99 Data\01 Map\Layer">
+      <UniqueIdentifier>{662cbd70-b096-4164-a840-d38ab6615861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\00 Player">
+      <UniqueIdentifier>{bd05b8b6-96e9-487c-b545-de1696701077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\02 Effect">
+      <UniqueIdentifier>{9850f4f4-08fb-428e-8eff-63afd55a2978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\98 UI">
+      <UniqueIdentifier>{52048a15-1e06-437e-9227-c5a022f341dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\01 Object">
+      <UniqueIdentifier>{a0359289-904a-4ef9-90b3-3b42da79558b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\01 Object\00 Monster">
+      <UniqueIdentifier>{a14c1c8d-826a-4604-aa1d-45ce3cb5ec55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene\97 Logo">
+      <UniqueIdentifier>{1ee65300-ef49-4515-b43e-a046a474315d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -104,6 +143,12 @@
     </ClInclude>
     <ClInclude Include="CBitmap.h">
       <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Loading.h">
+      <Filter>02 Scene\98 Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Logo.h">
+      <Filter>02 Scene\97 Logo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +209,12 @@
     </ClCompile>
     <ClCompile Include="CBitmap.cpp">
       <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Loading.cpp">
+      <Filter>02 Scene\98 Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Logo.cpp">
+      <Filter>02 Scene\97 Logo</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,7 +6,8 @@ class CSceneManager
 	DECLARE_SINGLETON(CSceneManager)
 
 public:
-	enum SCENE_ID { SCENE_TESTSTAGE, SCENE_END };
+	enum SCENE_ID { SCENE_LOGO, SCENE_LOADING
+									, SCENE_TESTSTAGE, SCENE_END };
 
 private:
 	explicit CSceneManager();

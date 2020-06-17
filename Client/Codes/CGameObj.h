@@ -8,7 +8,7 @@ class CResourceManager;
 class CGameObj
 {
 public:
-	CGameObj();
+	explicit CGameObj();
 	virtual ~CGameObj();
 
 public:

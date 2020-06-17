@@ -13,12 +13,7 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
-
-#include <Ole2.h>
-
-#include <gdiplus.h>
-#pragma comment (lib, "gdiplus")
-using namespace Gdiplus;
+#include <string.h>
 
 #include "Define.h"
 
@@ -45,6 +40,7 @@ ______________________________________________________________________*/
 #ifdef _DEBUG
 
 #define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
 #include <crtdbg.h>
 
 #ifndef DBG_NEW 

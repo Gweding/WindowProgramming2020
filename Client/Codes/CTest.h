@@ -4,8 +4,8 @@
 class CTest : public CGameObj
 {
 public:
-	CTest();
-	~CTest();
+	explicit CTest();
+	virtual ~CTest();
 
 public:
 	virtual HRESULT		Ready_GameObj(float fX, float fY, wstring strTag);

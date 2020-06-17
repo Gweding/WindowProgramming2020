@@ -10,6 +10,7 @@ CResourceManager::CResourceManager()
 
 CResourceManager::~CResourceManager()
 {
+	Free();
 }
 
 HDC CResourceManager::Find_Bmp(wstring strImgKey)
@@ -32,7 +33,7 @@ CImage* CResourceManager::Find_Sprite(wstring strImgKey)
 	return iter->second;
 }
 
-HRESULT CResourceManager::Load_Bmp(wstring strFilePath, wstring strImgKey)
+HRESULT CResourceManager::Load_Bmp(wstring strImgKey, wstring strFilePath)
 {
 	auto iter = m_mapBmp.find(strImgKey);
 
@@ -47,7 +48,7 @@ HRESULT CResourceManager::Load_Bmp(wstring strFilePath, wstring strImgKey)
 	return NOERROR;
 }
 
-HRESULT CResourceManager::Load_Sprite(wstring strFilePath, wstring strImgKey)
+HRESULT CResourceManager::Load_Sprite(wstring strImgKey, wstring strFilePath)
 {
 	auto iter = m_mapSprite.find(strImgKey);
 
@@ -90,7 +91,7 @@ void CResourceManager::Free()
 
 	for (auto& iter : m_mapSprite)
 	{
-		iter.second->ReleaseDC();
+		iter.second->Destroy();
 		SafeDelete(iter.second);
 	}
 	m_mapSprite.clear();
