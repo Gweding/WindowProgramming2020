@@ -28,7 +28,7 @@ HRESULT CScene_TestStage::Ready_Scene()
 	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Grid.png", L"TestStage_Back");
 
 
-	if (FAILED(m_pImage.Load(L"../Binary/Resources/Sprite/1 #16897.png")))
+	if (FAILED(m_pImage.Load(L"../Binary/Resources/Sprite/2.png")))
 		return E_FAIL;
 
 	return NOERROR;
