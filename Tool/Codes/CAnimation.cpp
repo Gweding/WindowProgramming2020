@@ -27,8 +27,8 @@ HRESULT CAnimation::Ready_GameObj()
 
 	m_pDialog = &pMenu->m_pMain->m_Animation;
 
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Animation_Back");
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Animation_MemDC");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Animation_Back");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Animation_MemDC");
 
 	return NOERROR;
 }

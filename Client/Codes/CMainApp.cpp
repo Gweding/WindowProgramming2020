@@ -17,8 +17,8 @@ HRESULT CMainApp::Ready_MainApp()
 
 	m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE);
 
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Back");
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"MemDC");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Back");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"MemDC");
 
 	return S_OK;
 }

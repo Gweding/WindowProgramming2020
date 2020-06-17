@@ -18,17 +18,17 @@ HRESULT CScene_TestStage::Ready_Scene()
 	CGameObj* pObj = nullptr;
 	CGameObj* pObj1 = nullptr;
 
-	pObj = CTest::Create(500 , 670 , L"../Binary/Resources/Player_Idle_Head00.png");
+	pObj = CTest::Create(500 , 670 , L"../../Binary/Resources/Test/Player_Idle_Head00.png");
 	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
 
-	pObj1 = CTest::Create(1000, 670, L"../Binary/Resources/Idle_0 #20945.png");
+	pObj1 = CTest::Create(1000, 670, L"../../Binary/Resources/Test/Idle_0 #20945.png");
 	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj1);	
 
 
-	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Grid.png", L"TestStage_Back");
+	m_pResourceMgr->Load_Sprite(L"../../Binary/Resources/Grid.png", L"TestStage_Back");
 
 
-	if (FAILED(m_pImage.Load(L"../Binary/Resources/Sprite/2.png")))
+	if (FAILED(m_pImage.Load(L"../../Binary/Resources/Test/2.png")))
 		return E_FAIL;
 
 	return NOERROR;

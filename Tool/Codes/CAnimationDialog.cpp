@@ -84,6 +84,7 @@ void CAnimationDialog::OnBnClicked_AddFrame()
 	TCHAR szCurPath[MAX_STR] = L"";
 	GetCurrentDirectory(MAX_STR, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Resources\\Sprite\\");
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
 
@@ -293,6 +294,7 @@ void CAnimationDialog::OnBnClicked_ChangeFrame()
 	TCHAR szCurPath[MAX_STR] = L"";
 	GetCurrentDirectory(MAX_STR, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Resources\\Sprite\\");
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
 
@@ -386,6 +388,7 @@ void CAnimationDialog::OnBnClicked_Save()
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Animation");
 
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
@@ -413,6 +416,7 @@ void CAnimationDialog::OnBnClicked_Load()
 
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Animation");
 

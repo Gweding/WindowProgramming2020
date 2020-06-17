@@ -155,6 +155,7 @@ void CMainDialog::OnBnClicked_LoadSoundDirectory()
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Resources");
 	CString strPath = szCurPath;
 	BROWSEINFO brInfo;

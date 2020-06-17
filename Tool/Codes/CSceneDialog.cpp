@@ -274,6 +274,7 @@ void CSceneDialog::OnBnClicked_LoadBackImage()
 	TCHAR szCurPath[MAX_STR] = L"";
 	GetCurrentDirectory(MAX_STR, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Resources\\Sprite\\");
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
 
@@ -320,6 +321,7 @@ void CSceneDialog::OnBnClicked_AddTile()
 
 	TCHAR szCurPath[MAX_STR] = L"";
 	GetCurrentDirectory(MAX_STR, szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Resources\\Sprite\\Tile\\"); 
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
@@ -465,6 +467,7 @@ void CSceneDialog::OnBnClicked_SavePallete()
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Pallete");
 
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
@@ -493,6 +496,7 @@ void CSceneDialog::OnBnClicked_LoadPallete()
 
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Pallete");
 
@@ -523,6 +527,7 @@ void CSceneDialog::OnBnClicked_SaveScene()
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
 	PathRemoveFileSpec(szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Scene");
 
 	Dlg.m_ofn.lpstrInitialDir = szCurPath;
@@ -548,6 +553,7 @@ void CSceneDialog::OnBnClicked_LoadScene()
 
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Scene");
 

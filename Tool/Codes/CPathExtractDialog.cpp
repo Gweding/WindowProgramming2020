@@ -140,7 +140,7 @@ void CPathExtractDialog::DirInfoExtraction(wstring strFullPath)
 
 			IMAGE tTemp;
 			tTemp.strImageTag = strTag;
-			tTemp.strRelativePath = wstring(szRelativePath) + find.GetFileName().GetString();
+			tTemp.strRelativePath = wstring(szRelativePath) + L"\\" + find.GetFileName().GetString();
 			m_ImageInfoList.emplace_back(tTemp);
 		}
 	}
@@ -161,6 +161,7 @@ void CPathExtractDialog::OnBnClicked_ExtractPath()
 
 	TCHAR szCurPath[256] = L"";
 	GetCurrentDirectory(256, szCurPath);
+	PathRemoveFileSpec(szCurPath);
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Binary\\Data\\Path");
 

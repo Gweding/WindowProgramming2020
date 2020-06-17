@@ -32,12 +32,12 @@ HRESULT CProject::Ready_Project()
 		return E_FAIL;
 	}
 
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Back");
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"MemDC");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Back");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"MemDC");
 
-	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Default.png", L"Default");
-	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/SelectedTile.png", L"SelectedTile");
-	m_pResourceMgr->Load_Sprite(L"../Binary/Resources/Sprite/Tile/0_Tile01_0.png", L"0_Tile01_0");
+	m_pResourceMgr->Load_Sprite(L"../../Binary/Resources/Default.png", L"Default");
+	m_pResourceMgr->Load_Sprite(L"../../Binary/Resources/SelectedTile.png", L"SelectedTile");
+	m_pResourceMgr->Load_Sprite(L"../../Binary/Resources/Sprite/Tile/0_Tile01_0.png", L"0_Tile01_0");
 
 	//
 	m_pScene = CScene::Create();

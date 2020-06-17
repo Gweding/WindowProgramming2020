@@ -29,8 +29,8 @@ HRESULT CPallete::Ready_GameObj()
 	m_tSelected.cx = TILE_SIZE;
 	m_tSelected.cy = TILE_SIZE;
 
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Pallete_Back");
-	m_pResourceMgr->Load_Bmp(L"../Binary/Resources/Back.bmp", L"Pallete_MemDC");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Pallete_Back");
+	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Pallete_MemDC");
 
 	return NOERROR;
 }

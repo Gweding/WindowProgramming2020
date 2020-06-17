@@ -20,7 +20,7 @@ HRESULT CMapLayer::Ready_GameObj()
 	m_eType = LAYER_BACK;
 	m_strLayerTag = L"Layer";
 	m_strSpriteKey = L"Default";
-	m_strSpritePath = L"../Binary/Resources/Default.png";
+	m_strSpritePath = L"../../Binary/Resources/Default.png";
 	m_tInfo.cx = 1280;
 	m_tInfo.cy = 720;
 	m_tInfo.x = m_tInfo.cx * 0.5f;
