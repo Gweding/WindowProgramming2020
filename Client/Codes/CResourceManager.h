@@ -18,6 +18,9 @@ public:
 	HRESULT Load_Sprite(wstring strImgKey, wstring strFilePath);
 
 public:
+	HRESULT Load_Sprite_FromPath(wstring strPath);
+
+public:
 	BOOL Check_Bmp(wstring strImgKey);
 	BOOL Check_Sprite(wstring strImgKey);
 

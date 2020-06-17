@@ -15,11 +15,18 @@ HRESULT CMainApp::Ready_MainApp()
 	m_pSceneMgr = CSceneManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 
-	m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOGO);
-	//m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE);
+	if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOGO)))
+		return E_FAIL;
+	//if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE)))
+	//	return E_FAIL;
 
-	m_pResourceMgr->Load_Bmp(L"Back", L"../../Binary/Resources/Back.bmp");
-	m_pResourceMgr->Load_Bmp(L"MemDC", L"../../Binary/Resources/Back2.bmp");
+	if (FAILED(m_pResourceMgr->Load_Bmp(L"Back", L"../../Binary/Resources/Back.bmp")))
+		return E_FAIL;
+	if (FAILED(m_pResourceMgr->Load_Bmp(L"MemDC", L"../../Binary/Resources/Back2.bmp")))
+		return E_FAIL;
+
+	if (AddFontResource(L"../../Binary/Font/NanumSquareEB.ttf") == 0)
+		return E_FAIL;
 
 	return S_OK;
 }
@@ -65,6 +72,8 @@ CMainApp* CMainApp::Create()
 
 void CMainApp::Free()
 {
+	RemoveFontResource(L"../../Binary/Font/NanumSquareEB.ttf");
+
 	ReleaseDC(g_hWnd, m_hDC);
 
 	CKeyManager::GetInstance()->DestroyInstance();

@@ -184,7 +184,7 @@ void CPathExtractDialog::OnBnClicked_ExtractPath()
 			return;
 
 		for (auto tInfo : m_ImageInfoList)
-			fout << tInfo.strImageTag << "|" << tInfo.strRelativePath << endl;
+			fout << tInfo.strImageTag << " " << tInfo.strRelativePath << endl;
 
 		fout.close();
 	}

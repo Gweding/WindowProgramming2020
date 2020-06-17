@@ -63,6 +63,39 @@ HRESULT CResourceManager::Load_Sprite(wstring strImgKey, wstring strFilePath)
 	return NOERROR;
 }
 
+HRESULT CResourceManager::Load_Sprite_FromPath(wstring strPath)
+{
+	std::locale::global(std::locale("Korean"));
+#ifdef _UNICODE
+	wifstream fin;
+#else
+	wifstream fin;
+#endif // _UNICODE
+
+	fin.open(strPath);
+
+	if (fin.fail())
+		return E_FAIL;;
+
+	wstring strImageKey = L"";
+	wstring strImagePath = L"";
+
+	while (true)
+	{
+		fin >> strImageKey >> strImagePath;
+
+		if (fin.eof())
+			break;
+
+		if (FAILED(Load_Sprite(strImageKey, strImagePath)))
+			return E_FAIL;
+	}
+
+	fin.close();
+
+	return NOERROR;
+}
+
 BOOL CResourceManager::Check_Bmp(wstring strImgKey)
 {
 	auto iter = m_mapBmp.find(strImgKey);

@@ -30,7 +30,7 @@ HRESULT CScene_Logo::Ready_Scene()
 HRESULT CScene_Logo::Update_Scene(const float& fTimeDelta)
 {
 	if (m_bSceneChange)
-		return E_FAIL;
+		return m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOADING);
 
 	m_fAlpha += fTimeDelta * m_fSpeed;
 
