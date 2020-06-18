@@ -113,6 +113,9 @@ INT CAnimation::Update_GameObj(const float& fTimeDelta)
 					pFrame->tCollRect.right = LONG(temp.right - pFrame->x);
 					pFrame->tCollRect.top = LONG(temp.top - pFrame->y);
 					pFrame->tCollRect.bottom = LONG(temp.bottom - pFrame->y);
+
+					for (auto pVecFrame : m_vecFrame)
+						pVecFrame->tCollRect = pFrame->tCollRect;
 				}
 			}
 

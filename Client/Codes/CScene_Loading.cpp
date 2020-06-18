@@ -123,37 +123,37 @@ unsigned int __stdcall CScene_Loading::Load_Resource(void* pParam)
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Effect.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"이펙트 로드 실패";
 		return E_FAIL;
 	}
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Map.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"맵 로드 실패";
 		return E_FAIL;
 	}
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Monster.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"몬스터 로드 실패";
 		return E_FAIL;
 	}
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Player.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"플레이어 로드 실패";
 		return E_FAIL;
 	}
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Tile.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"타일 로드 실패";
 		return E_FAIL;
 	}
 
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_UI.dat")))
 	{
-		pLogo->m_strLoadingMessage = L"로딩 실패";
+		pLogo->m_strLoadingMessage = L"UI 로드 실패";
 		return E_FAIL;
 	}
 
