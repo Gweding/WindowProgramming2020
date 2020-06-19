@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "CScene_Logo.h"
 
-#include "CTest.h"
-
 CScene_Logo::CScene_Logo()
 {
 }

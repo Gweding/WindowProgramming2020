@@ -146,8 +146,8 @@ void CAnimation::Render_GameObj(HDC hdc)
 		m_hBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
 		m_hOldBrush = SelectObject(hBack, m_hBrush);
 		Rectangle(hBack, m_vecFrame[(int)m_fCurrFrame]->tCollRect.left + (int)m_vecFrame[(int)m_fCurrFrame]->x,
-										m_vecFrame[(int)m_fCurrFrame]->tCollRect.top + (int)m_vecFrame[(int)m_fCurrFrame]->x,
-										m_vecFrame[(int)m_fCurrFrame]->tCollRect.right + (int)m_vecFrame[(int)m_fCurrFrame]->y,
+										m_vecFrame[(int)m_fCurrFrame]->tCollRect.top + (int)m_vecFrame[(int)m_fCurrFrame]->y,
+										m_vecFrame[(int)m_fCurrFrame]->tCollRect.right + (int)m_vecFrame[(int)m_fCurrFrame]->x,
 										m_vecFrame[(int)m_fCurrFrame]->tCollRect.bottom + (int)m_vecFrame[(int)m_fCurrFrame]->y);
 		SelectObject(hBack, m_hOldPen);
 		SelectObject(hBack, m_hOldBrush);
@@ -384,7 +384,7 @@ HRESULT CAnimation::Load_Animation(wstring strPath)
 
 		if (!m_pResourceMgr->Check_Sprite(pFrame->strTag))
 		{
-			if (FAILED(m_pResourceMgr->Load_Sprite(pFrame->strTag, pFrame->strPath)))
+			if (FAILED(m_pResourceMgr->Load_Sprite(pFrame->strPath, pFrame->strTag)))
 				return E_FAIL;
 		}
 

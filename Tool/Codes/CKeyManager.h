@@ -13,6 +13,10 @@ const DWORD KEY_W = 0x00000080;
 const DWORD KEY_E = 0x00000200;
 const DWORD KEY_R = 0x00000400;
 
+const DWORD KEY_A = 0x00000800;
+const DWORD KEY_S = 0x00002000;
+const DWORD KEY_D = 0x00004000;
+
 class CKeyManager
 {
 	DECLARE_SINGLETON(CKeyManager)

@@ -25,7 +25,9 @@
 #include "CRenderManager.h"
 #include "CResourceManager.h"
 #include "CCollisionManager.h"
-
+#include "CAnimationManager.h"
+#include "CMapManager.h"
+#include "CScrollManager.h"
 
 /*____________________________________________________________________
 Window Console창.

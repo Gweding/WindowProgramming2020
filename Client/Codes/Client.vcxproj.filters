@@ -43,9 +43,6 @@
     <Filter Include="02 Scene\99 TestStage">
       <UniqueIdentifier>{a166a380-c2b7-4cb1-85aa-ceb6cde74688}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01 GameObj\test">
-      <UniqueIdentifier>{0585124d-eb93-415c-ab64-2d3fa95b1bcf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="98 Manager\05 ResourceManager\Bitmap">
       <UniqueIdentifier>{e12a8cd9-1366-4875-bb30-ebbfd7d07d64}</UniqueIdentifier>
     </Filter>
@@ -87,6 +84,15 @@
     </Filter>
     <Filter Include="02 Scene\97 Logo">
       <UniqueIdentifier>{1ee65300-ef49-4515-b43e-a046a474315d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\99 Data\01 Map\Tile">
+      <UniqueIdentifier>{035f0945-7c02-471f-b8dd-2c8c5161107a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 Manager\08 ScrollManager">
+      <UniqueIdentifier>{d7eee568-46f8-4915-8752-25915ed7567b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\01 Object\99 AnimatedObject">
+      <UniqueIdentifier>{c8c85ae0-5eeb-4b90-a05f-24b4ba91493b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -138,9 +144,6 @@
     <ClInclude Include="CScene_TestStage.h">
       <Filter>02 Scene\99 TestStage</Filter>
     </ClInclude>
-    <ClInclude Include="CTest.h">
-      <Filter>01 GameObj\test</Filter>
-    </ClInclude>
     <ClInclude Include="CBitmap.h">
       <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
     </ClInclude>
@@ -149,6 +152,30 @@
     </ClInclude>
     <ClInclude Include="CScene_Logo.h">
       <Filter>02 Scene\97 Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>01 GameObj\99 Data\00 Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CMap.h">
+      <Filter>01 GameObj\99 Data\01 Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CLayer.h">
+      <Filter>01 GameObj\99 Data\01 Map\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationManager.h">
+      <Filter>98 Manager\06 AnimationManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CMapManager.h">
+      <Filter>98 Manager\07 MapManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CTile.h">
+      <Filter>01 GameObj\99 Data\01 Map\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="CScrollManager.h">
+      <Filter>98 Manager\08 ScrollManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>01 GameObj\00 Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -204,9 +231,6 @@
     <ClCompile Include="CScene_TestStage.cpp">
       <Filter>02 Scene\99 TestStage</Filter>
     </ClCompile>
-    <ClCompile Include="CTest.cpp">
-      <Filter>01 GameObj\test</Filter>
-    </ClCompile>
     <ClCompile Include="CBitmap.cpp">
       <Filter>98 Manager\05 ResourceManager\Bitmap</Filter>
     </ClCompile>
@@ -215,6 +239,30 @@
     </ClCompile>
     <ClCompile Include="CScene_Logo.cpp">
       <Filter>02 Scene\97 Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>01 GameObj\99 Data\00 Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CMap.cpp">
+      <Filter>01 GameObj\99 Data\01 Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CLayer.cpp">
+      <Filter>01 GameObj\99 Data\01 Map\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationManager.cpp">
+      <Filter>98 Manager\06 AnimationManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapManager.cpp">
+      <Filter>98 Manager\07 MapManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CTile.cpp">
+      <Filter>01 GameObj\99 Data\01 Map\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="CScrollManager.cpp">
+      <Filter>98 Manager\08 ScrollManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>01 GameObj\00 Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

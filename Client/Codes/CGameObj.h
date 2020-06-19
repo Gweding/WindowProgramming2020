@@ -5,6 +5,7 @@ class CTimeManager;
 class CGameManager;
 class CRenderManager;
 class CResourceManager;
+class CAnimationManager;
 class CGameObj
 {
 public:
@@ -12,8 +13,9 @@ public:
 	virtual ~CGameObj();
 
 public:
-	INFO& Get_Info()		{ return m_tInfo; }
-	RECT& Get_Rect()	{ return m_tRect; }
+	INFO& Get_Info()			{ return m_tInfo; }
+	RECT& Get_Rect()		{ return m_tRect; }
+	COLOR& Get_Color()	{ return m_tColor; }
 	void								Dead_GameObj() { m_bIsDead = true; }
 
 public:
@@ -31,6 +33,7 @@ protected:
 	CTimeManager*		m_pTimeMgr = nullptr;
 	CGameManager*		m_pGameMgr = nullptr;
 	CResourceManager* m_pResourceMgr = nullptr;
+	CAnimationManager* m_pAnimationMgr = nullptr;
 
 protected:
 	INFO			m_tInfo;

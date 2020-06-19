@@ -14,9 +14,6 @@ HRESULT CScene_Loading::Ready_Scene()
 {
 	CScene::Ready_Scene();
 
-	InitializeCriticalSection(&m_CriticalSection);
-	m_hLoadingThread = (HANDLE)_beginthreadex(nullptr, 0, Load_Resource, this, 0, nullptr);
-
 	if (FAILED(m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Loading.dat")))
 		return E_FAIL;
 
@@ -24,11 +21,14 @@ HRESULT CScene_Loading::Ready_Scene()
 
 	m_strLoadingMessage = L"";
 
+	InitializeCriticalSection(&m_CriticalSection);
+
 	return NOERROR;
 }
 
 HRESULT CScene_Loading::Update_Scene(const float& fTimeDelta)
 {
+	WaitForSingleObject(m_hLoadingThread, INFINITE);
 
 	if (m_bLoadingEnd && !m_bTransition)
 	{
@@ -154,6 +154,18 @@ unsigned int __stdcall CScene_Loading::Load_Resource(void* pParam)
 	if (FAILED(pLogo->m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_UI.dat")))
 	{
 		pLogo->m_strLoadingMessage = L"UI 로드 실패";
+		return E_FAIL;
+	}
+
+	if (FAILED(pLogo->m_pAnimationMgr->Load_AnimationPath(L"../../Binary/Data/Path/AnimationPath_Test.dat")))
+	{
+		pLogo->m_strLoadingMessage = L"TEST 애니메이션 로드 실패";
+		return E_FAIL;
+	}
+
+	if(FAILED(pLogo->m_pMapMgr->Load_MapPath(L"../../Binary/Data/Path/MapPath_0.dat")))
+	{
+		pLogo->m_strLoadingMessage = L"맵 정보 로드 실패";
 		return E_FAIL;
 	}
 

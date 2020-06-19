@@ -42,6 +42,7 @@ public:
 	bool m_bPlay = false;
 	float m_fCurrFrame = 0;
 	const int m_iWindowSize = 420;
+	int m_iSize = 1;
 
 public:
 	static CAnimation* Create();

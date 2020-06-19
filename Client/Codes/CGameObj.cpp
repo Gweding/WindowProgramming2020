@@ -15,8 +15,9 @@ HRESULT CGameObj::Ready_GameObj()
 	m_pKeyMgr = CKeyManager::GetInstance();
 	m_pTimeMgr = CTimeManager::GetInstance();
 	m_pGameMgr = CGameManager::GetInstance();
-	m_pResourceMgr = CResourceManager::GetInstance();
 	m_pRenderMgr = CRenderManager::GetInstance();
+	m_pResourceMgr = CResourceManager::GetInstance();
+	m_pAnimationMgr = CAnimationManager::GetInstance();
 
 	return S_OK;
 }

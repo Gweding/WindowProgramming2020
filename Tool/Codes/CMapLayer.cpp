@@ -83,6 +83,20 @@ void CMapLayer::Render_GameObj(HDC hdc)
 
 INT CMapLayer::Update_BackLayer(const float& fTimeDelta)
 {
+	if (m_pKeyMgr->KeyDown(KEY_R))
+	{
+		m_tInfo.x = m_tInfo.cx * m_fSize[0] * 0.5f;
+		m_tInfo.y = m_tInfo.cy * m_fSize[1] * 0.5f;
+	}
+	if (m_pKeyMgr->KeyPressing(KEY_W))
+		m_tInfo.y -= fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_S))
+		m_tInfo.y += fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_A))
+		m_tInfo.x -= fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_D))
+		m_tInfo.x += fTimeDelta * 100.f;
+
 	return 0;
 }
 
@@ -97,8 +111,8 @@ INT CMapLayer::Update_ObjectLayer(const float& fTimeDelta)
 	{
 		if (m_pKeyMgr->KeyPressing(KEY_LBUTTON))
 		{
-			m_tInfo.x = (float)pt.x;
-			m_tInfo.y = (float)pt.y;
+			m_tInfo.x = (float)pt.x + CScrollManager::GetScrollPos(0);
+			m_tInfo.y = (float)pt.y + CScrollManager::GetScrollPos(1);
 		}
 	}
 
@@ -107,6 +121,14 @@ INT CMapLayer::Update_ObjectLayer(const float& fTimeDelta)
 		m_tInfo.x = m_tInfo.cx * m_fSize[0] * 0.5f;
 		m_tInfo.y = m_tInfo.cy * m_fSize[1] * 0.5f;
 	}
+	if (m_pKeyMgr->KeyPressing(KEY_W))
+		m_tInfo.y -= fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_S))
+		m_tInfo.y += fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_A))
+		m_tInfo.x -= fTimeDelta * 100.f;
+	if (m_pKeyMgr->KeyPressing(KEY_D))
+		m_tInfo.x += fTimeDelta * 100.f;
 
 	return 0;
 }
@@ -306,6 +328,8 @@ void CMapLayer::Render_BackLayer(HDC hdc)
 	pImage->Draw(hdc, m_tRect.left - int(CScrollManager::GetScrollPos(0) * m_fSpeed)
 										, m_tRect.top - int(CScrollManager::GetScrollPos(1) * m_fSpeed)
 										, int(m_tInfo.cx * m_fSize[0]), int(m_tInfo.cy * m_fSize[1]));
+
+	cout << m_tInfo.x << " // " << m_tInfo.y << " // " << m_tRect.left << " // " << m_tRect.top << endl;
 }
 
 void CMapLayer::Render_ObjectLayer(HDC hdc)
@@ -529,7 +553,7 @@ HRESULT CMapLayer::Save_ImageLayer(wofstream& fout)
 {
 	fout << m_eType << endl;
 	fout << m_strLayerTag << " " << m_strSpriteKey << " "
-		<< m_fSpeed << " " << m_fSize[0] << " " << m_fSize[1] << " " << m_strSpritePath << endl;
+		<< m_fSpeed << " " << m_fSize[0] << " " << m_fSize[1] << " " << m_strSpritePath << " " << m_tInfo.x << " " << m_tInfo.y << endl;
 
 	return NOERROR;
 }
@@ -575,7 +599,7 @@ HRESULT CMapLayer::Save_CollLayer(wofstream& fout)
 
 HRESULT CMapLayer::Load_ImageLayer(wifstream& fin)
 {
-	fin >> m_strLayerTag >> m_strSpriteKey >> m_fSpeed >> m_fSize[0] >> m_fSize[1] >> m_strSpritePath;
+	fin >> m_strLayerTag >> m_strSpriteKey >> m_fSpeed >> m_fSize[0] >> m_fSize[1] >> m_strSpritePath >> m_tInfo.x >> m_tInfo.y;
 
 	if (!m_pResourceMgr->Check_Sprite(m_strSpriteKey))
 		m_pResourceMgr->Load_Sprite(m_strSpritePath, m_strSpriteKey);
@@ -585,8 +609,6 @@ HRESULT CMapLayer::Load_ImageLayer(wifstream& fin)
 	{
 		m_tInfo.cx = (float)pImage->GetWidth();
 		m_tInfo.cy = (float)pImage->GetHeight();
-		m_tInfo.x = m_tInfo.cx * 0.5f;
-		m_tInfo.y = m_tInfo.cy * 0.5f;
 	}
 
 	return NOERROR;

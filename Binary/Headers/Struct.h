@@ -29,31 +29,20 @@ typedef struct tagInfo
 	float cy;
 }INFO;
 
-//typedef struct tagFrame
-//{
-//	tagFrame() {}
-//	tagFrame(float _fCurFrame, float _fFrameCnt, float _fSpeed)
-//		: fCurFrame(_fCurFrame), fFrameCnt(_fFrameCnt), fFrameSpeed(_fSpeed)
-//	{}
-//
-//	float fCurFrame;
-//	float fFrameCnt;
-//	float fFrameSpeed;
-//}FRAME;
-
 typedef struct tagImage
 {
 	wstring strImageTag;
 	wstring strRelativePath;
 }IMAGE;
 
-enum COLL_TYPE { COLL_ALL, COLL_JUMP, COLL_INTERACT, COLL_END };
+enum COLL_TYPE { COLL_ALL, COLL_JUMP, COLL_INTERACT, COLL_NONE, COLL_ERROR, COLL_END };
 typedef struct tagCollRect
 {
 	COLL_TYPE iType;
 	RECT tRect;
 }COLL_RECT;
 
+#ifdef TOOL
 typedef struct tagFrame
 {
 	tagFrame() {}
@@ -71,6 +60,20 @@ typedef struct tagFrame
 	wstring strPath;
 	RECT tCollRect;
 }FRAME;
+#else
+typedef struct tagFrame
+{
+	tagFrame() {}
+	tagFrame(wstring Tag, float Speed, INFO info)
+		: strTag(Tag), fSpeed(Speed), tInfo(info)
+	{}
+
+	INFO tInfo;
+	float fSpeed;
+	wstring strTag;
+	wstring strPath;
+}FRAME;
+#endif
 
 typedef struct tagTile
 {

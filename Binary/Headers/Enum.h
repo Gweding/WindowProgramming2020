@@ -2,7 +2,7 @@
 
 #ifdef CLIENT
 
-enum OBJID { GAMEOBJ, OBJ_END };
+enum OBJID { MAP, PLAYER, MONSTER, EFFECT, GAMEOBJ, OBJ_END };
 
 #endif
 

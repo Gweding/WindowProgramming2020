@@ -46,8 +46,10 @@ void CKeyManager::UpdateKey()
 	if (GetAsyncKeyState(VK_TAB) & 0x8000)
 		m_dwCurKey |= KEY_TAB;
 
-
-
+	if(GetAsyncKeyState(VK_F1) & 0x8000)
+		m_dwCurKey |= KEY_COLLIDER;
+	if (GetAsyncKeyState(VK_F2) & 0x8000)
+		m_dwCurKey |= KEY_PLAYERCOLLIDER;
 }
 
 

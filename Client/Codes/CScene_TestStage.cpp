@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CScene_TestStage.h"
 
-#include "CTest.h"
+#include "CPlayer.h"
 
 CScene_TestStage::CScene_TestStage()
 {
@@ -18,17 +18,17 @@ HRESULT CScene_TestStage::Ready_Scene()
 	CGameObj* pObj = nullptr;
 	CGameObj* pObj1 = nullptr;
 
-	pObj = CTest::Create(500 , 670 , L"../../Binary/Resources/Test/Player_Idle_Head00.png");
-	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj);
+	pObj = CPlayer::Create(WINCX * 0.5f, WINCY - 200.f);
+	m_pGameMgr->Add_GameObject(PLAYER, pObj);
 
-	pObj1 = CTest::Create(1000, 670, L"../../Binary/Resources/Test/Idle_0 #20945.png");
-	m_pGameMgr->Add_GameObject(GAMEOBJ, pObj1);	
+	if (FAILED(m_pImage.Load(L"../../Binary/Resources/Sprite/Map/Back/Back.png")))
+		return E_FAIL;
 
+	m_pMap = m_pMapMgr->Find_Map(L"Map_Tutorial");
+	if (m_pMap == nullptr)
+		return E_FAIL;
 
-	m_pResourceMgr->Load_Sprite(L"TestStage_Back", L"../../Binary/Resources/Grid.png");
-
-
-	if (FAILED(m_pImage.Load(L"../../Binary/Resources/Test/2.png")))
+	if (FAILED(m_pGameMgr->Set_CurrMap(m_pMap)))
 		return E_FAIL;
 
 	return NOERROR;
@@ -36,16 +36,14 @@ HRESULT CScene_TestStage::Ready_Scene()
 
 HRESULT CScene_TestStage::Update_Scene(const float& fTimeDelta)
 {
+	m_pMap->Update_GameObj(fTimeDelta);
+
 	return CScene::Update_Scene(fTimeDelta);
 }
 
 HRESULT CScene_TestStage::Render_Scene(HDC hDC)
 {
-	//Graphics pGraphics(hDC);
-	//Image* pImage = m_pResourceMgr->Find_Sprite(L"TestStage_Back");
-	//pGraphics.DrawImage(pImage, 0, 0, 1280, 720);
-
-	m_pImage.Draw(hDC, 0, 0, WINCX, WINCY);
+	m_pMap->Render_GameObj(hDC);
 
 	return CScene::Render_Scene(hDC);
 }

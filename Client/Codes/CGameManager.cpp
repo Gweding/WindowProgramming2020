@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CGameManager.h"
 
+#include "CMap.h"
+
 IMPLEMENT_SINGLETON(CGameManager)
 
 CGameManager::CGameManager()
@@ -89,4 +91,35 @@ HRESULT CGameManager::Reset_OBJLIST()
 	}
 
 	return NOERROR;
+}
+
+HRESULT CGameManager::Set_CurrMap(CMap* pMap)
+{
+	if (pMap == nullptr)
+		return E_FAIL;
+
+	m_pCurrMap = pMap;
+
+	return NOERROR;
+}
+
+list<COLL_RECT*>& CGameManager::Get_MapCollider()
+{
+	// TODO: 여기에 return 문을 삽입합니다.
+	return m_pCurrMap->Get_MapCollider();
+}
+
+CGameObj* CGameManager::Get_Object(OBJID eID, int iIndex)
+{
+	if (iIndex > m_ObjLst[eID].size())
+		return nullptr;
+
+	if (iIndex == 0)
+		return m_ObjLst[eID].front();
+
+	auto iter = m_ObjLst[eID].begin();
+	for (int i = 0; i < iIndex; ++i)
+		++iter;
+
+	return (*iter);
 }

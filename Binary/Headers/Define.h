@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#include <iostream>
 #include <list>
 #include <vector>
 #include <map>
@@ -60,7 +61,7 @@ using namespace chrono;
 #define OBJ_NOEVENT 0
 #define OBJ_DEAD 1
 
-#define TILE_SIZE 32
+#define TILE_SIZE 64
 
 #ifdef TOOL
 #define MSG_BOX(msg)									\

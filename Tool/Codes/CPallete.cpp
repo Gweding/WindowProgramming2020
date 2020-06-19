@@ -26,8 +26,8 @@ HRESULT CPallete::Ready_GameObj()
 
 	m_tSelected.x = 0;
 	m_tSelected.y = 0;
-	m_tSelected.cx = TILE_SIZE;
-	m_tSelected.cy = TILE_SIZE;
+	m_tSelected.cx = 32.f;
+	m_tSelected.cy = 32.f;
 
 	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Pallete_Back");
 	m_pResourceMgr->Load_Bmp(L"../../Binary/Resources/Back.bmp", L"Pallete_MemDC");
@@ -105,10 +105,10 @@ HRESULT CPallete::Add_Tile(wstring strPath, wstring strTag)
 	pTile->strPath = strPath;
 
 	int iIndex = (int)m_TileList.size();
-	pTile->cx = TILE_SIZE;
-	pTile->cy = TILE_SIZE;
-	pTile->x = (float)(iIndex % 8) * TILE_SIZE;
-	pTile->y = (float)(iIndex / 8) * TILE_SIZE;
+	pTile->cx = 32.f;
+	pTile->cy = 32.f;
+	pTile->x = (float)(iIndex % 8) * 32.f;
+	pTile->y = (float)(iIndex / 8) * 32.f;
 
 	m_TileList.emplace_back(pTile);
 

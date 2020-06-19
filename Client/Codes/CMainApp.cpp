@@ -15,10 +15,12 @@ HRESULT CMainApp::Ready_MainApp()
 	m_pSceneMgr = CSceneManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 
-	if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOGO)))
-		return E_FAIL;
+	//if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOGO)))
+	//	return E_FAIL;
 	//if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE)))
 	//	return E_FAIL;
+	if (FAILED(m_pSceneMgr->Change_Scene(CSceneManager::SCENE_LOADING)))
+		return E_FAIL;
 
 	if (FAILED(m_pResourceMgr->Load_Bmp(L"Back", L"../../Binary/Resources/Back.bmp")))
 		return E_FAIL;
@@ -78,9 +80,12 @@ void CMainApp::Free()
 
 	CKeyManager::GetInstance()->DestroyInstance();
 	CTimeManager::GetInstance()->DestroyInstance();
-	CSceneManager::GetInstance()->DestroyInstance();
+
+	CMapManager::GetInstance()->DestroyInstance();
+	CAnimationManager::GetInstance()->DestroyInstance();
 
 	//
+	CSceneManager::GetInstance()->DestroyInstance();
 	CGameManager::GetInstance()->DestroyInstance();
 	CRenderManager::GetInstance()->DestroyInstance();
 	CResourceManager::GetInstance()->DestroyInstance();

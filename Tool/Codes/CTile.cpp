@@ -1,3 +1,5 @@
+#include "..\..\Client\Codes\CTile.h"
+#include "..\..\Client\Codes\CTile.h"
 #include "pch.h"
 #include "CTile.h"
 
@@ -37,7 +39,13 @@ INT CTile::Update_GameObj(const float& fTimeDelta)
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	if (PtInRect(&m_tRect, pt))
+	RECT temp = m_tRect;
+	temp.left -= (int)CScrollManager::GetScrollPos(0);
+	temp.right -= (int)CScrollManager::GetScrollPos(0);
+	temp.top -= (int)CScrollManager::GetScrollPos(1);
+	temp.bottom -= (int)CScrollManager::GetScrollPos(1);
+
+	if (PtInRect(&temp, pt))
 	{
 		m_bSelected = true;
 		if (m_pKeyMgr->KeyDown(KEY_RBUTTON))
@@ -57,7 +65,7 @@ void CTile::Render_GameObj(HDC hdc)
 	if (m_bSelected)
 	{
 		pImage = m_pResourceMgr->Find_Sprite(L"SelectedTile");
-		pImage->Draw(hdc, (int)m_tRect.left - (int)CScrollManager::GetScrollPos(0), (int)m_tRect.top - (int)CScrollManager::GetScrollPos(1), pImage->GetWidth(), pImage->GetHeight());
+		pImage->Draw(hdc, (int)m_tRect.left - (int)CScrollManager::GetScrollPos(0), (int)m_tRect.top - (int)CScrollManager::GetScrollPos(1), pImage->GetWidth() * 2.f, pImage->GetHeight() * 2.f);
 	}
 }
 
