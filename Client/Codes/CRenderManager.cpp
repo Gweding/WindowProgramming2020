@@ -15,14 +15,11 @@ CRenderManager::~CRenderManager()
 
 HRESULT CRenderManager::RenderObject(HDC hdc)
 {
-	for (int i = 0; i < OBJID::OBJ_END; ++i)
-	{
-		OBJITER iter_begin = m_RenderLst.begin();
-		OBJITER iter_end = m_RenderLst.end();
+	OBJITER iter_begin = m_RenderLst.begin();
+	OBJITER iter_end = m_RenderLst.end();
 
-		for (; iter_begin != iter_end; ++iter_begin)
-			(*iter_begin)->Render_GameObj(hdc);
-	}
+	for (; iter_begin != iter_end; ++iter_begin)
+		(*iter_begin)->Render_GameObj(hdc);
 
 	m_RenderLst.clear();
 	if (!m_RenderLst.empty())

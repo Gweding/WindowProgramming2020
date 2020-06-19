@@ -18,9 +18,6 @@ HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
 	m_tInfo.x = fStartX;
 	m_tInfo.y = fStartY;
 
-	//m_bJump = true;
-	//m_fJumpAccel = -1000.f;
-
 	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 
 	return NOERROR;
@@ -33,15 +30,14 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	if (m_bJump)
 	{
 		m_tInfo.y -= m_fJumpPower * fTimeDelta;
-		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
+		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 	}
-
 
 	m_pAnimation->Update_GameObj(fTimeDelta);
 
-	Update_Collision();
 	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
+	Update_Collision();
 
 	m_pRenderMgr->AddBack_RenderList(this);
 
@@ -50,7 +46,6 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 
 void CPlayer::Render_GameObj(HDC hDC)
 {
-	//m_pImage.Draw(hDC, m_tRect);
 	m_pAnimation->Render_GameObj(hDC);
 }
 
@@ -82,6 +77,7 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 
 	if (m_pKeyMgr->KeyPressing(KEY_SPACE)) // 스페이스바를 누르면 대가리 교체
 	{
+		// 임시 점프
 		if (!m_bJump)
 		{
 			m_bJump = true;
@@ -99,67 +95,58 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 
 int CPlayer::Update_Collision()
 {
-	system("cls");
-
 	for (auto pCollRect : m_pGameMgr->Get_MapCollider())
 	{
-		RECT tDstRect = pCollRect->tRect;	// 맵에 있는 렉트
+		RECT tDstRect = pCollRect->tRect;								// 맵에 있는 렉트
 		RECT tSrcRect = m_pAnimation->Get_CollRect();		// 플레이어 렉트
-		RECT tTempRect = {};		// 겹친 렉트
+		RECT tTempRect = {};														// 겹친 렉트
 
 		if (IntersectRect(&tTempRect, &tSrcRect, &tDstRect))
 		{
+			float fX = m_tInfo.x;
+			float fY = m_tInfo.y;
+
+			float fDstX = tDstRect.right - tDstRect.left;
+			float fDstY = tDstRect.bottom - tDstRect.top;
+
 			float fMoveX = tTempRect.right - tTempRect.left;
 			float fMoveY = tTempRect.bottom - tTempRect.top;
 
-			//cout << fMoveX << " // " << fMoveY << endl;
-			cout << "ㅇㅇ" << endl;
-
-			if (pCollRect->iType != COLL_INTERACT)
+			//위 아래 충돌
+			if (fMoveX > fMoveY)
 			{
-				// 충돌해야하는 박스
-				//위 아래 충돌
-				if (fMoveX > fMoveY)
+				if (m_tInfo.y < (tDstRect.bottom + tDstRect.top) / 2)
 				{
-					if (m_tInfo.y < (tDstRect.bottom + tDstRect.top) / 2)
-					{
-						// 위
-						m_bJump = false;
-						m_tInfo.y -= fMoveY;
-						CScrollManager::SetScrollPos(0, -fMoveY);
-					}
-					else
-					{
-						// 아래
-						m_tInfo.y += fMoveY;
-						CScrollManager::SetScrollPos(0, fMoveY);
-					}
+					// 위
+					m_bJump = false;
+					m_tInfo.y -= fMoveY;
+					CScrollManager::SetScrollPos(0, -fMoveY);
 				}
-				//오른쪽 왼쪽 충돌
 				else
 				{
-					if (m_tInfo.x < (tDstRect.right + tDstRect.left) / 2)
-					{
-						m_tInfo.x -= fMoveX;
-						CScrollManager::SetScrollPos(-fMoveX, 0);
-					}
-					else
-					{
-						m_tInfo.x += fMoveX;
-						CScrollManager::SetScrollPos(fMoveX, 0);
-					}
+					// 아래
+					m_tInfo.y += fMoveY;
+					CScrollManager::SetScrollPos(0, fMoveY);
 				}
 			}
+			//오른쪽 왼쪽 충돌
 			else
 			{
-				// 상호작용
+				if (m_tInfo.x < (tDstRect.right + tDstRect.left) / 2)
+				{
+					m_tInfo.x -= fMoveX;
+					CScrollManager::SetScrollPos(-fMoveX, 0);
+				}
+				else
+				{
+					m_tInfo.x += fMoveX;
+					CScrollManager::SetScrollPos(fMoveX, 0);
+				}
 			}
 		}
-		else
-			cout << "늬늬" << endl;
 	}
 
-	cout << "==========================" << endl;
+	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
 
 	return 0;
 }
