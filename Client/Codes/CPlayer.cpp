@@ -56,6 +56,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 	}
 	
+	
 	m_pAnimation->Update_GameObj(fTimeDelta);
 
 	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
@@ -126,7 +127,23 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 		//m_tInfo.x -= fTimeDelta * m_fSpeed;
 		//CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
 	}
-	
+
+	//if (m_pKeyMgr->KeyDown(KEY_PLAYERDASH))
+	//{
+	//	if (m_bRight)
+	//	{
+	//		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Dash_Head_R");
+	//		m_tInfo.x += fTimeDelta * m_fSpeed * 5;
+	//		CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed * 5, 0);
+	//	}
+	//	else
+	//	{
+	//		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Dash_Head_L");
+	//		m_tInfo.x -= fTimeDelta * m_fSpeed * 5;
+	//		CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed * 5, 0);
+	//	}
+	//}
+
 	if (m_pKeyMgr->KeyDown(KEY_PLAYERJUMP)) // 스페이스바를 누르면 대가리 교체
 	{
 		// 임시 점프
@@ -181,6 +198,8 @@ int CPlayer::Update_Collision()
 				if (m_tInfo.y < (tDstRect.bottom + tDstRect.top) / 2)
 				{
 					// 위
+					if(!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
+					else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
 					m_bJump = false;
 					m_iDJump = 0;
 					m_tInfo.y -= fMoveY;

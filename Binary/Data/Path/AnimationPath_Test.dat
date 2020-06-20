@@ -2,6 +2,8 @@ Player_Attack_Head_L ..\..\Binary\Data\Animation\Player_Attack_Head_L.dat
 Player_Attack_Head_R ..\..\Binary\Data\Animation\Player_Attack_Head_R.dat
 Player_Attack_NoHead_L ..\..\Binary\Data\Animation\Player_Attack_NoHead_L.dat
 Player_Attack_NoHead_R ..\..\Binary\Data\Animation\Player_Attack_NoHead_R.dat
+Player_Dash_Head_L ..\..\Binary\Data\Animation\Player_Dash_Head_L.dat
+Player_Dash_Head_R ..\..\Binary\Data\Animation\Player_Dash_Head_R.dat
 Player_Fall_Head_L ..\..\Binary\Data\Animation\Player_Fall_Head_L.dat
 Player_Fall_Head_R ..\..\Binary\Data\Animation\Player_Fall_Head_R.dat
 Player_Fall_NoHead_L ..\..\Binary\Data\Animation\Player_Fall_NoHead_L.dat
