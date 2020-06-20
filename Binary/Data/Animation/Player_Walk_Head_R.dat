@@ -1,7 +1,7 @@
-Player_Walk_Head00 10 210 210 176 132 -26 -64 46 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head00.png
-Player_Walk_Head01 10 210 210 168 136 -30 -61 42 64 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head01.png
-Player_Walk_Head02 10 210 210 148 136 -37 -62 42 64 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head02.png
-Player_Walk_Head03 10 210 210 148 132 -55 -56 58 63 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head03.png
-Player_Walk_Head04 10 210 210 172 144 -42 -59 57 68 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head04.png
-Player_Walk_Head05 10 210 210 168 136 -40 -61 52 63 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head05.png
-Player_Walk_Head06 10 210 210 168 136 -45 -67 43 65 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head06.png
+Player_Walk_Head00 10 210 210 44 33 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head00.png
+Player_Walk_Head01 10 210 210 42 34 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head01.png
+Player_Walk_Head02 10 210 210 37 34 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head02.png
+Player_Walk_Head03 10 210 210 37 33 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head03.png
+Player_Walk_Head04 10 210 210 43 36 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head04.png
+Player_Walk_Head05 10 210 210 42 34 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head05.png
+Player_Walk_Head06 10 210 210 42 34 -206 107 -206 107 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head06.png

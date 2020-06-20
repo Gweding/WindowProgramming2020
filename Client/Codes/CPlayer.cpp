@@ -18,7 +18,7 @@ HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
 	m_tInfo.x = fStartX;
 	m_tInfo.y = fStartY;
 
-	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
+	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
 
 	return NOERROR;
 }
@@ -32,6 +32,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		m_tInfo.y -= m_fJumpPower * fTimeDelta;
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
+		
 	}
 
 	m_pAnimation->Update_GameObj(fTimeDelta);
@@ -53,6 +54,7 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 {
 	if (m_pKeyMgr->KeyPressing(KEY_UP))
 	{
+
 		m_tInfo.y -= fTimeDelta * m_fSpeed;
 		CScrollManager::SetScrollPos(0, -fTimeDelta * m_fSpeed);
 	}
@@ -65,17 +67,19 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 
 	if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
 	{
+		//m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
 		m_tInfo.x += fTimeDelta * m_fSpeed;
 		CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
 	}
 
 	if (m_pKeyMgr->KeyPressing(KEY_LEFT))
 	{
+		//m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 		m_tInfo.x -= fTimeDelta * m_fSpeed;
 		CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
 	}
 
-	if (m_pKeyMgr->KeyPressing(KEY_SPACE)) // 스페이스바를 누르면 대가리 교체
+	if (m_pKeyMgr->KeyDown(KEY_SPACE)) // 스페이스바를 누르면 대가리 교체
 	{
 		// 임시 점프
 		if (!m_bJump)
@@ -97,9 +101,9 @@ int CPlayer::Update_Collision()
 {
 	for (auto pCollRect : m_pGameMgr->Get_MapCollider())
 	{
-		RECT tDstRect = pCollRect->tRect;								// 맵에 있는 렉트
+		RECT tDstRect = pCollRect->tRect;					// 맵에 있는 렉트
 		RECT tSrcRect = m_pAnimation->Get_CollRect();		// 플레이어 렉트
-		RECT tTempRect = {};														// 겹친 렉트
+		RECT tTempRect = {};								// 겹친 렉트
 
 		if (IntersectRect(&tTempRect, &tSrcRect, &tDstRect))
 		{
