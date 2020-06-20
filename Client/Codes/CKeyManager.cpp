@@ -50,6 +50,15 @@ void CKeyManager::UpdateKey()
 		m_dwCurKey |= KEY_COLLIDER;
 	if (GetAsyncKeyState(VK_F2) & 0x8000)
 		m_dwCurKey |= KEY_PLAYERCOLLIDER;
+
+	if (GetAsyncKeyState('Z') & 0x8000)
+		m_dwCurKey |= KEY_PLAYERDASH;
+	if (GetAsyncKeyState('X') & 0x8000)
+		m_dwCurKey |= KEY_PLAYERATTACK;
+	if (GetAsyncKeyState('C') & 0x8000)
+		m_dwCurKey |= KEY_PLAYERJUMP;
+
+
 }
 
 

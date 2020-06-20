@@ -16,7 +16,7 @@ HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
 	CGameObj::Ready_GameObj();
 
 	m_tInfo.x = fStartX;
-	m_tInfo.y = fStartY;
+	m_tInfo.y = fStartY + 15;
 
 	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
 
@@ -34,7 +34,12 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 		
 	}
-
+	else if (m_iDJump == 2)
+	{
+		m_tInfo.y -= m_fJumpPower * fTimeDelta;
+		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
+		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
+	}
 	m_pAnimation->Update_GameObj(fTimeDelta);
 
 	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
@@ -67,32 +72,70 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 
 	if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
 	{
-		//m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
+		m_bRight = TRUE;
+		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
 		m_tInfo.x += fTimeDelta * m_fSpeed;
 		CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+	}
+	if (m_pKeyMgr->KeyUp(KEY_RIGHT))
+	{
+		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
 	}
 
 	if (m_pKeyMgr->KeyPressing(KEY_LEFT))
 	{
-		//m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
+		m_bRight = FALSE;
+		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 		m_tInfo.x -= fTimeDelta * m_fSpeed;
 		CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
 	}
+	if (m_pKeyMgr->KeyUp(KEY_LEFT))
+	{
+		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
+	}
 
-	if (m_pKeyMgr->KeyDown(KEY_SPACE)) // 스페이스바를 누르면 대가리 교체
+	if (m_pKeyMgr->KeyDown(KEY_PLAYERATTACK))
+	{
+		if (m_bJump)
+		{
+			
+			if(!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_L");
+			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_R");
+		}
+		else
+		{
+			if(!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_L");
+			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_R");
+		}
+		//m_tInfo.x -= fTimeDelta * m_fSpeed;
+		//CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+	}
+	
+	if (m_pKeyMgr->KeyDown(KEY_PLAYERJUMP)) // 스페이스바를 누르면 대가리 교체
 	{
 		// 임시 점프
 		if (!m_bJump)
 		{
 			m_bJump = true;
-
+			m_iDJump = 1;
 			TCHAR m_szData01[255];
 			GetPrivateProfileString(_T("Jump"), _T("Accel"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
 			m_fJumpAccel = (float)_tstof(m_szData01);
 			GetPrivateProfileString(_T("Jump"), _T("Power"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
 			m_fJumpPower = (float)_tstof(m_szData01);
 		}
+		else if(m_bJump && m_iDJump == 1)
+		{
+			m_bJump = true;
+			m_iDJump = 2;
+			TCHAR m_szData01[255];
+			GetPrivateProfileString(_T("Jump"), _T("DAccel"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+			m_fJumpAccel = (float)_tstof(m_szData01);
+			GetPrivateProfileString(_T("Jump"), _T("DPower"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+			m_fJumpPower = (float)_tstof(m_szData01);
+		}
 	}
+
 
 	return 0;
 }
@@ -123,6 +166,7 @@ int CPlayer::Update_Collision()
 				{
 					// 위
 					m_bJump = false;
+					m_iDJump = 0;
 					m_tInfo.y -= fMoveY;
 					CScrollManager::SetScrollPos(0, -fMoveY);
 				}

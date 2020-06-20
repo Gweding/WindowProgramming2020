@@ -26,9 +26,12 @@ private:
 	float							m_fJumpAccel = 0.f;
 
 private:
-	bool							m_bDJump = false;
+	int							m_iDJump = 0;
 	float							m_fDJumpPower = 0.f;
 	float							m_fDJumpAccel = 0.f;
+
+private:
+	bool							m_bRight;
 
 public:
 	static CPlayer* Create(float fStartX, float fStartY);
