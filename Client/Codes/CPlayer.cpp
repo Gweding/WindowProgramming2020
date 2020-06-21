@@ -19,47 +19,127 @@ HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
 	m_tInfo.y = fStartY + 15;
 
 	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
+	m_iCheck = IDLE;
+
+	TCHAR m_szData01[255];
+	GetPrivateProfileString(_T("Jump"), _T("Accel"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+	m_fJumpAccel = (float)_tstof(m_szData01);
+	GetPrivateProfileString(_T("Jump"), _T("Power"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+	m_fJumpPower = (float)_tstof(m_szData01);
+	
 
 	return NOERROR;
 }
 
 int CPlayer::Update_GameObj(const float& fTimeDelta)
 {
-	Update_Key(fTimeDelta);
+	//Update_Key(fTimeDelta);
 	switch (m_iCheck)
 	{
 	case IDLE:
 		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
+		if (m_pKeyMgr->KeyPressing(KEY_LEFT))
+		{
+			m_iCheck = WALK;
+			m_bRight = false;
+		}
+		if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
+		{
+			m_iCheck = WALK;
+			m_bRight = true;
+		}
+		if (m_pKeyMgr->KeyDown(KEY_PLAYERJUMP))
+		{
+			m_iCheck = JUMP;
+		}
 		break;
 
 	case WALK:
 		if (!m_bRight)
 		{
-			if(m_bJump)
+			
 			m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 			
 			m_tInfo.x -= fTimeDelta * m_fSpeed;
 			CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+			if (m_pKeyMgr->KeyUp(KEY_LEFT))
+			{
+				m_iCheck = IDLE;
+				m_bRight = FALSE;
+			}
+			if (m_pKeyMgr->KeyUp(KEY_PLAYERJUMP))
+			{
+				m_iCheck = JUMP;
+				m_bRight = FALSE;
+			}
 		}
 		else
 		{
-			if(m_bJump)
+			
 			m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
 			
 			m_tInfo.x += fTimeDelta * m_fSpeed;
 			CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+			if (m_pKeyMgr->KeyUp(KEY_RIGHT))
+			{
+				m_iCheck = IDLE;
+				m_bRight = true;
+			}
+			if (m_pKeyMgr->KeyUp(KEY_PLAYERJUMP))
+			{
+				m_iCheck = JUMP;
+				m_bRight = TRUE;
+			}
 		}
+		
 		break;
 
 	case JUMP:
-
+		
 		if (m_fJumpPower >= 0)
+		{
+
 			if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
+			if (m_pKeyMgr->KeyPressing(KEY_LEFT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
+
+				m_tInfo.x -= fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+			}
+			if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
+
+				m_tInfo.x += fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+			}
+		}
 		else
+		{
 			if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_L");
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_R");
+			if (m_pKeyMgr->KeyPressing(KEY_LEFT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_L");
+
+				m_tInfo.x -= fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+			}
+			if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_R");
+
+				m_tInfo.x += fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+			}
+		}
+		if (m_pKeyMgr->KeyPressing(KEY_PLAYERJUMP))
+		{
+			m_iCheck = DJUMP;
+		}
 		m_tInfo.y -= m_fJumpPower * fTimeDelta;
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
@@ -67,11 +147,44 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 
 	case DJUMP:
 		if (m_fJumpPower >= 0)
+		{
+
 			if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
+			if (m_pKeyMgr->KeyPressing(KEY_LEFT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
+
+				m_tInfo.x += fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+			}
+			if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
+
+				m_tInfo.x -= fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+			}
+		}
 		else
+		{
 			if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_L");
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_R");
+			if (m_pKeyMgr->KeyPressing(KEY_LEFT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_L");
+
+				m_tInfo.x += fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+			}
+			if (m_pKeyMgr->KeyPressing(KEY_RIGHT))
+			{
+				m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_R");
+
+				m_tInfo.x -= fTimeDelta * m_fSpeed;
+				CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+			}
+		}
 
 		m_tInfo.y -= m_fJumpPower * fTimeDelta;
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
@@ -131,7 +244,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	Update_Collision();
 
 	m_pRenderMgr->AddBack_RenderList(this);
-
+	cout << m_tInfo.y << endl;
 	return 0;
 }
 
