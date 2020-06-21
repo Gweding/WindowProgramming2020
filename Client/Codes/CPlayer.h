@@ -1,6 +1,6 @@
 #pragma once
 #include "CGameObj.h"
-
+enum PLAYERSTATUS {IDLE, WALK, JUMP, DJUMP, ATTACK, JMPATTACK, DASH, SKILL1, SKILL2};
 class CPlayer : public CGameObj
 {
 public:
@@ -32,6 +32,7 @@ private:
 
 private:
 	bool							m_bRight;
+	int								m_iCheck;
 
 public:
 	static CPlayer* Create(float fStartX, float fStartY);

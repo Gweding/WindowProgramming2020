@@ -20,6 +20,9 @@ public:
 	HRESULT					Add_CollRect(RECT tRect);
 
 public:
+	BOOL					Check_FrameEnd() { return m_bAnimationEnd; }
+
+public:
 	void								Update_Position(float fX, float fY);
 
 private:
@@ -31,6 +34,7 @@ private:
 	vector<FRAME*>	m_vecFrame;
 
 private:
+	BOOL m_bAnimationEnd = FALSE;
 	BOOL m_bRenderCollider = TRUE;
 
 private:

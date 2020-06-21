@@ -37,7 +37,12 @@ int CAnimation::Update_GameObj(const float& fTimeDelta)
 
 	m_fCurrFrame += m_vecFrame[(int)m_fCurrFrame]->fSpeed * fTimeDelta;
 	if (m_fCurrFrame > m_vecFrame.size())
+	{
 		m_fCurrFrame = 0.f;
+		m_bAnimationEnd = TRUE;
+	}
+	else
+		m_bAnimationEnd = FALSE;
 
 	CGameObj::Update_Rect();
 
