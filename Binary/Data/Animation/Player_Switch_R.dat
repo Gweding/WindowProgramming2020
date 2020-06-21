@@ -1,7 +1,7 @@
-Player_Walk_Head00 10 210 210 176 132 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head00.png
-Player_Walk_Head01 10 210 210 168 136 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head01.png
-Player_Walk_Head02 10 210 210 148 136 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head02.png
-Player_Walk_Head03 10 210 210 148 132 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head03.png
-Player_Walk_Head04 10 210 210 172 144 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head04.png
-Player_Walk_Head05 10 210 210 168 136 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head05.png
-Player_Walk_Head06 10 210 210 168 136 -65 -62 54 59 ..\..\Binary\Resources\Sprite\Player\Walk\Player_Walk_Head_R\Player_Walk_Head06.png
+Player_Switch00 10 210 210 184 204 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch00.png
+Player_Switch01 10 210 210 244 180 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch01.png
+Player_Switch02 10 210 210 232 216 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch02.png
+Player_Switch03 10 210 210 192 212 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch03.png
+Player_Switch04 10 210 210 204 188 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch04.png
+Player_Switch05 10 210 210 264 188 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch05.png
+Player_Switch06 10 210 210 240 216 -23 -54 43 73 ..\..\Binary\Resources\Sprite\Player\Switch\Switch_R\Player_Switch06.png

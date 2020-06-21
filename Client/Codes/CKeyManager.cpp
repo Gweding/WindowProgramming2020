@@ -53,6 +53,12 @@ void CKeyManager::UpdateKey()
 
 	if (GetAsyncKeyState('Z') & 0x8000)
 		m_dwCurKey |= KEY_PLAYERDASH;
+
+	if (GetAsyncKeyState('D') & 0x8000)
+		m_dwCurKey |= KEY_PLAYERSKILL1;
+	if (GetAsyncKeyState('S') & 0x8000)
+		m_dwCurKey |= KEY_PLAYERSKILL2;
+
 	if (GetAsyncKeyState('X') & 0x8000)
 		m_dwCurKey |= KEY_PLAYERATTACK;
 	if (GetAsyncKeyState('C') & 0x8000)
