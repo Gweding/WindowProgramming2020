@@ -29,12 +29,29 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	switch (m_iCheck)
 	{
 	case IDLE:
-		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_R");
-		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_L");
+		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
+		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
 		break;
+
 	case WALK:
-		
+		if (!m_bRight)
+		{
+			if(m_bJump)
+			m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
+			
+			m_tInfo.x -= fTimeDelta * m_fSpeed;
+			CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
+		}
+		else
+		{
+			if(m_bJump)
+			m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
+			
+			m_tInfo.x += fTimeDelta * m_fSpeed;
+			CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+		}
 		break;
+
 	case JUMP:
 
 		if (m_fJumpPower >= 0)
@@ -47,6 +64,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 		break;
+
 	case DJUMP:
 		if (m_fJumpPower >= 0)
 			if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
@@ -59,6 +77,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		CScrollManager::SetScrollPos(0, -m_fJumpPower * fTimeDelta);
 		m_fJumpPower -= m_fJumpAccel * fTimeDelta;
 		break;
+
 	case ATTACK:
 		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_R");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_L");
@@ -68,6 +87,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
 		}
 		break;
+
 	case JMPATTACK:
 		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_R");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_L");
@@ -77,6 +97,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 			else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
 		}
 		break;
+
 	case DASH:
 		if (m_bRight)
 		{
@@ -88,7 +109,6 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 		}
 		else
 		{
-
 			m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Dash_Head_L");
 			m_tInfo.x -= fTimeDelta * m_fSpeed * 5;
 			CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed * 5, 0);
@@ -102,6 +122,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 			m_iCheck = IDLE;
 		}
 		break;
+
 	}
 	
 	m_pAnimation->Update_GameObj(fTimeDelta);
@@ -138,12 +159,11 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 	{
 		m_iCheck = WALK;
 		m_bRight = TRUE;
-		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_R");
-		m_tInfo.x += fTimeDelta * m_fSpeed;
-		CScrollManager::SetScrollPos(fTimeDelta * m_fSpeed, 0);
+		
 	}
 	if (m_pKeyMgr->KeyUp(KEY_RIGHT))
 	{
+		
 		m_iCheck = IDLE;
 		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
 	}
@@ -152,9 +172,6 @@ int CPlayer::Update_Key(const float& fTimeDelta)
 	{
 		m_iCheck = WALK;
 		m_bRight = FALSE;
-		m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
-		m_tInfo.x -= fTimeDelta * m_fSpeed;
-		CScrollManager::SetScrollPos(-fTimeDelta * m_fSpeed, 0);
 	}
 	if (m_pKeyMgr->KeyUp(KEY_LEFT))
 	{
