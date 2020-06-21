@@ -17,6 +17,9 @@ private:
 	int								Update_Collision();
 
 private:
+	void								Restore_Jump(); // 착지했을때 점프 수복
+
+private:
 	float m_fSpeed = 500.f;
 	CAnimation* m_pAnimation = nullptr;
 

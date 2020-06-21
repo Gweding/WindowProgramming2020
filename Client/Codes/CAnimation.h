@@ -20,7 +20,7 @@ public:
 	HRESULT					Add_CollRect(RECT tRect);
 
 public:
-	BOOL					Check_FrameEnd() { return m_bAnimationEnd; }
+	BOOL							Check_FrameEnd() { return m_bAnimationEnd; }
 
 public:
 	void								Update_Position(float fX, float fY);

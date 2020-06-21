@@ -244,7 +244,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	Update_Collision();
 
 	m_pRenderMgr->AddBack_RenderList(this);
-	cout << m_tInfo.y << endl;
+
 	return 0;
 }
 
@@ -370,10 +370,7 @@ int CPlayer::Update_Collision()
 				if (m_tInfo.y < (tDstRect.bottom + tDstRect.top) / 2)
 				{
 					// 위
-					if(!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_L");
-					else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
-					m_bJump = false;
-					m_iDJump = 0;
+					Restore_Jump();
 					m_tInfo.y -= fMoveY;
 					CScrollManager::SetScrollPos(0, -fMoveY);
 				}
@@ -404,6 +401,19 @@ int CPlayer::Update_Collision()
 	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
 
 	return 0;
+}
+
+void CPlayer::Restore_Jump()
+{
+	// 착지를 했을때에 대한 값 변경
+	m_bJump = false;
+	m_iDJump = 0;
+	m_iCheck = IDLE;
+	TCHAR m_szData01[255];
+	GetPrivateProfileString(_T("Jump"), _T("Accel"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+	m_fJumpAccel = (float)_tstof(m_szData01);
+	GetPrivateProfileString(_T("Jump"), _T("Power"), NULL, m_szData01, 255, _T("../../Binary/Data/DebugData.ini"));
+	m_fJumpPower = (float)_tstof(m_szData01);
 }
 
 CPlayer* CPlayer::Create(float fStartX, float fStartY)
