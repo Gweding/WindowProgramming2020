@@ -19,6 +19,10 @@ HRESULT CScene::Ready_Scene()
 	m_pResourceMgr = CResourceManager::GetInstance();
 	m_pAnimationMgr = CAnimationManager::GetInstance();
 
+	m_pSceneMgr->Get_ChangeScene() = FALSE;
+
+	m_hFont = CreateFont(40, 0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 0, 0, 0, VARIABLE_PITCH || FF_ROMAN, TEXT("³ª´®½ºÄù¾î ExtraBold"));
+
 	return NOERROR;
 }
 
@@ -29,10 +33,18 @@ HRESULT CScene::Update_Scene(const float& fTimeDelta)
 
 HRESULT CScene::Render_Scene(HDC hDC)
 {
+	if (m_pSceneMgr->Get_ChangeScene())
+	{
+		m_pSceneMgr->Change_Scene(m_pSceneMgr->Get_NextScene());
+		return NOERROR;
+	}
+
 	return m_pRenderMgr->RenderObject(hDC);
 }
 
 void CScene::Free()
 {
+	SelectObject(GetDC(g_hWnd), m_oldFont);
+	DeleteObject(m_hFont);
 }
 

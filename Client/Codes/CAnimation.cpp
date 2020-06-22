@@ -22,6 +22,17 @@ RECT CAnimation::Get_CollRect()
 	return tRect;
 }
 
+int CAnimation::Get_CollSize(int iAxis)
+{
+	if (iAxis == 0)
+		return (m_tCollRect.right - m_tCollRect.left);
+
+	if (iAxis == 1)
+		return (m_tCollRect.bottom - m_tCollRect.top);
+
+	return 0;
+}
+
 HRESULT CAnimation::Ready_GameObj()	        
 {
 	CGameObj::Ready_GameObj();
@@ -36,7 +47,7 @@ int CAnimation::Update_GameObj(const float& fTimeDelta)
 	m_tColor = {};
 
 	m_fCurrFrame += m_vecFrame[(int)m_fCurrFrame]->fSpeed * fTimeDelta;
-	if (m_fCurrFrame > m_vecFrame.size())
+	if (m_fCurrFrame >= m_vecFrame.size())
 	{
 		m_fCurrFrame = 0.f;
 		m_bAnimationEnd = TRUE;

@@ -9,6 +9,8 @@ public:
 
 public:
 	RECT Get_CollRect();
+	int Get_CollSize(int iAxis);
+	RECT Get_OriginCollRect() { return m_tCollRect; }
 
 public:
 	virtual HRESULT		Ready_GameObj();

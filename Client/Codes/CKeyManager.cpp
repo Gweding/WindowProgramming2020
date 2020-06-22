@@ -64,7 +64,10 @@ void CKeyManager::UpdateKey()
 	if (GetAsyncKeyState('C') & 0x8000)
 		m_dwCurKey |= KEY_PLAYERJUMP;
 
-
+	if (GetAsyncKeyState('F') & 0x8000)
+		m_dwCurKey |= KEY_INTERACT;
+	if (GetAsyncKeyState('R') & 0x8000)
+		m_dwCurKey |= KEY_RESTART;
 }
 
 

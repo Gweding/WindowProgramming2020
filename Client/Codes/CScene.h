@@ -20,6 +20,10 @@ public:
 	virtual HRESULT		Render_Scene(HDC hDC);
 
 protected:
+	HFONT m_hFont;
+	HFONT m_oldFont;
+
+protected:
 	CMap* m_pMap = nullptr;
 
 protected:

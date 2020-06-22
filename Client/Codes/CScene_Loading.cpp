@@ -17,8 +17,6 @@ HRESULT CScene_Loading::Ready_Scene()
 	if (FAILED(m_pResourceMgr->Load_Sprite_FromPath(L"../../Binary/Data/Path/ImagePath_Loading.dat")))
 		return E_FAIL;
 
-	m_hFont = CreateFont(40, 0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 0, 0, 0, VARIABLE_PITCH || FF_ROMAN, TEXT("³ª´®½ºÄù¾î ExtraBold"));
-
 	m_strLoadingMessage = L"";
 
 	InitializeCriticalSection(&m_CriticalSection);
@@ -47,7 +45,7 @@ HRESULT CScene_Loading::Update_Scene(const float& fTimeDelta)
 
 		if (m_fBackAlpha < 0.f)
 		{
-			m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TESTSTAGE);
+			m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TUTORIAL);
 			return NOERROR;
 		}
 	}
@@ -181,7 +179,4 @@ void CScene_Loading::Free()
 {
 	CloseHandle(m_hLoadingThread);
 	DeleteCriticalSection(&m_CriticalSection);
-
-	SelectObject(GetDC(g_hWnd), m_oldFont);
-	DeleteObject(m_hFont);
 }

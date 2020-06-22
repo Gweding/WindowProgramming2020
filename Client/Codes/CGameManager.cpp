@@ -20,6 +20,9 @@ CGameManager::~CGameManager()
 
 HRESULT CGameManager::Update_Object(const float& fTimeDelta)
 {
+	if (CSceneManager::GetInstance()->Get_ChangeScene())
+		return NOERROR;
+
 	for (int i = 0; i < OBJID::OBJ_END; ++i)
 	{
 		OBJITER iter_begin = m_ObjLst[i].begin();

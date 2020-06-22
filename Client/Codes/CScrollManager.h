@@ -9,6 +9,7 @@ public:
 public:
 	static float GetScrollPos(int iAxis);
 	static void SetScrollPos(float iX, float iY);
+	static void SetScrollValue(float iX, float iY);
 
 private:
 	static float m_fScroll[2];

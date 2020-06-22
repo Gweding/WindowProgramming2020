@@ -14,7 +14,6 @@ public:
 
 private:
 	HRESULT					Update_LogoAnimation(const float& fTimeDelta);
-	HRESULT					Update_LoadingAnimation(const float& fTimeDelta);
 
 private:
 	static unsigned int __stdcall Load_Resource(void* pParam);
@@ -22,10 +21,6 @@ private:
 private:
 	CRITICAL_SECTION		m_CriticalSection;
 	HANDLE							m_hLoadingThread;
-
-private:
-	HFONT m_hFont;
-	HFONT m_oldFont;
 
 private:
 	float							m_fCurrFrame = 0.f;

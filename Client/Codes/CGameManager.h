@@ -25,6 +25,9 @@ public:
 	list<COLL_RECT*>& Get_MapCollider();
 
 public:
+	CGameObj* Get_Player() { return m_ObjLst[PLAYER].front(); }
+
+public:
 	CGameObj* Get_Object(OBJID eID, int iIndex = 0);
 
 private:

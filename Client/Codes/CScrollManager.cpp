@@ -30,3 +30,9 @@ void CScrollManager::SetScrollPos(float iX, float iY)
 	m_fScroll[0] += iX;
 	m_fScroll[1] += iY;
 }
+
+void CScrollManager::SetScrollValue(float iX, float iY)
+{
+	m_fScroll[0] = iX;
+	m_fScroll[1] = iY;
+}

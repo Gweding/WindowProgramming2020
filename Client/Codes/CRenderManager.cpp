@@ -28,6 +28,14 @@ HRESULT CRenderManager::RenderObject(HDC hdc)
 	return NOERROR;
 }
 
+HRESULT CRenderManager::Clear_RenderList()
+{
+	if (!m_RenderLst.empty())
+		m_RenderLst.clear();
+
+	return NOERROR;
+}
+
 HRESULT CRenderManager::AddBack_RenderList(CGameObj* pGameObj)
 {
 	if (pGameObj == nullptr)

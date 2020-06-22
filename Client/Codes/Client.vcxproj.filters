@@ -73,15 +73,6 @@
     <Filter Include="01 GameObj\02 Effect">
       <UniqueIdentifier>{9850f4f4-08fb-428e-8eff-63afd55a2978}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01 GameObj\98 UI">
-      <UniqueIdentifier>{52048a15-1e06-437e-9227-c5a022f341dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01 GameObj\01 Object">
-      <UniqueIdentifier>{a0359289-904a-4ef9-90b3-3b42da79558b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01 GameObj\01 Object\00 Monster">
-      <UniqueIdentifier>{a14c1c8d-826a-4604-aa1d-45ce3cb5ec55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02 Scene\97 Logo">
       <UniqueIdentifier>{1ee65300-ef49-4515-b43e-a046a474315d}</UniqueIdentifier>
     </Filter>
@@ -91,7 +82,22 @@
     <Filter Include="98 Manager\08 ScrollManager">
       <UniqueIdentifier>{d7eee568-46f8-4915-8752-25915ed7567b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01 GameObj\01 Object\99 AnimatedObject">
+    <Filter Include="02 Scene\00 TutorialStage">
+      <UniqueIdentifier>{f28a0149-bd7f-4ffb-9c65-29d400527005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene\01 Stage0">
+      <UniqueIdentifier>{387a2455-31a5-4c87-9a73-30c2de51acce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene\02 Stage1">
+      <UniqueIdentifier>{6404fa6c-4e39-4750-a7c9-51cec905a8af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\01 Monster">
+      <UniqueIdentifier>{a0359289-904a-4ef9-90b3-3b42da79558b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 Scene\96 EventScene">
+      <UniqueIdentifier>{64dc30db-3f53-4c0e-97df-80502ec90a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 GameObj\03 Portal">
       <UniqueIdentifier>{c8c85ae0-5eeb-4b90-a05f-24b4ba91493b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -176,6 +182,21 @@
     </ClInclude>
     <ClInclude Include="CPlayer.h">
       <Filter>01 GameObj\00 Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_TutorialStage.h">
+      <Filter>02 Scene\00 TutorialStage</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Stage0.h">
+      <Filter>02 Scene\01 Stage0</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Stage1.h">
+      <Filter>02 Scene\02 Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="CPortal.h">
+      <Filter>01 GameObj\03 Portal</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Event.h">
+      <Filter>02 Scene\96 EventScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +284,21 @@
     </ClCompile>
     <ClCompile Include="CPlayer.cpp">
       <Filter>01 GameObj\00 Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_TutorialStage.cpp">
+      <Filter>02 Scene\00 TutorialStage</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Stage0.cpp">
+      <Filter>02 Scene\01 Stage0</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Stage1.cpp">
+      <Filter>02 Scene\02 Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="CPortal.cpp">
+      <Filter>01 GameObj\03 Portal</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Event.cpp">
+      <Filter>02 Scene\96 EventScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

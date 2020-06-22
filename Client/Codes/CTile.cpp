@@ -32,10 +32,10 @@ HRESULT CTile::Ready_GameObj(wstring strTag, wstring strPath, float fX, float fY
 
 INT CTile::Update_GameObj(const float& fTimeDelta)
 {
-	if (0.f >= m_tInfo.x - CScrollManager::GetScrollPos(0) ||
-		0.f >= m_tInfo.y - CScrollManager::GetScrollPos(1) ||
-		(float)WINCX <= m_tInfo.x - CScrollManager::GetScrollPos(0) ||
-		(float)WINCY <= m_tInfo.y - CScrollManager::GetScrollPos(1))
+	if (0.f >= m_tInfo.x - CScrollManager::GetScrollPos(0) + 100.f ||
+		0.f >= m_tInfo.y - CScrollManager::GetScrollPos(1) + 100.f ||
+		(float)WINCX <= m_tInfo.x - CScrollManager::GetScrollPos(0) - 100.f ||
+		(float)WINCY <= m_tInfo.y - CScrollManager::GetScrollPos(1) - 100.f)
 		m_bRender = false;
 	else
 		m_bRender = true;

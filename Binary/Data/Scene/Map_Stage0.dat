@@ -1,0 +1,328 @@
+0
+Back Back 0.05 2 2 ..\..\Binary\Resources\Sprite\Map\Back\Back.png 465.272 -451.324
+1
+Portal Portal_0 1 2 2 ..\..\Binary\Resources\Sprite\Map\Portal\Portal_0.png 7,326.99 995.142
+1
+Layer Flag_1 1 2 2 ..\..\Binary\Resources\Sprite\Map\Flag\Flag_1.png 75 189
+1
+Layer Tree05 1 3 3 ..\..\Binary\Resources\Sprite\Map\Tree\Tree05.png 410 351
+1
+Layer Flower18 1 3 3 ..\..\Binary\Resources\Sprite\Map\flower\Flower18.png 2,389.1 484.658
+2
+291
+Tile
+Tile_00 32 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_00.png
+Tile_01 96 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 160 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 224 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 288 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 352 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 416 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 480 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 544 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_02 2,336 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_02.png
+Tile_02 2,400 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_02.png
+Tile_02 2,464 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_02.png
+Tile_02 2,528 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_02.png
+Tile_02 2,592 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_02.png
+Tile_06 2,592 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,464 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,528 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,400 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,336 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 544 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 480 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 416 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 352 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 288 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 224 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 160 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 96 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_04 32 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 32 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 32 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_05 96 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 96 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 544 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 544 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,336 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,336 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,400 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,464 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,528 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,528 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,592 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,592 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_04 32 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 32 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 32 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 32 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_05 96 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 96 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 96 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 96 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 160 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 224 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 288 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 352 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 416 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 480 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 544 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 544 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 544 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_06 2,336 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,400 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,464 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,528 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,592 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,592 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,528 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,464 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,400 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,336 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,336 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,400 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,464 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,528 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,592 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,592 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,528 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,464 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,400 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 2,336 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_06 544 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_06.png
+Tile_03 608 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_03.png
+Tile_07 608 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 608 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_08 32 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_08.png
+Tile_11 608 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_11.png
+Tile_09 96 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 160 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 224 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_10 544 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 480 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 416 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 352 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_09 288 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_12 736 416 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_13 800 416 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_13.png
+Tile_13 864 416 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_13.png
+Tile_15 928 416 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 1,056 224 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_13 1,120 224 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_13.png
+Tile_13 1,184 224 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_13.png
+Tile_13 1,248 224 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_13.png
+Tile_15 1,312 224 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 1,504 288 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 1,568 288 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 1,760 352 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 1,824 352 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 1,952 480 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 2,016 480 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_04 2,272 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 2,272 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_00 2,272 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_00.png
+Tile_03 2,656 608 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_03.png
+Tile_07 2,656 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 2,656 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_11 2,656 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_11.png
+Tile_08 2,272 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_08.png
+Tile_09 2,336 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 2,464 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 2,592 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_10 2,400 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 2,528 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_05 2,400 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 2,464 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_12 2,912 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 2,976 736 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 3,168 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 3,232 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 3,616 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_12 3,552 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_12 4,000 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 4,064 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_25 4,448 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_25.png
+Tile_24 4,384 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_24.png
+Tile_27 4,576 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_27.png
+Tile_32 4,384 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_32.png
+Tile_33 4,448 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_33.png
+Tile_35 4,576 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_35.png
+Tile_34 4,512 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_34.png
+Tile_26 4,512 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_26.png
+Tile_24 4,896 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_24.png
+Tile_27 4,960 992 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_27.png
+Tile_32 4,896 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_32.png
+Tile_35 4,960 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_35.png
+Tile_12 5,280 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_12.png
+Tile_15 5,408 928 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 5,600 1,120 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 5,856 800 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 6,048 672 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 6,176 864 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_15 6,304 1,056 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_15.png
+Tile_00 6,688 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_00.png
+Tile_01 6,752 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 6,816 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 6,880 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 6,944 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,008 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,072 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,136 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,200 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,264 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,328 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,392 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,456 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,520 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_01 7,584 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_01.png
+Tile_03 7,648 1,248 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_03.png
+Tile_04 6,688 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 6,688 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 6,688 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_04 6,688 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_04.png
+Tile_07 7,648 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 7,648 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 7,648 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_07 7,648 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_07.png
+Tile_08 6,688 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_08.png
+Tile_11 7,648 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_11.png
+Tile_09 6,752 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 6,880 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 7,008 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 7,136 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 7,264 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 7,392 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_09 7,520 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_09.png
+Tile_10 6,816 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 6,944 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 7,072 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 7,200 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 7,328 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 7,456 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_10 7,584 1,568 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_10.png
+Tile_05 6,752 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,752 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,752 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,752 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,816 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,816 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,816 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,816 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,880 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,880 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,880 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,880 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,944 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,944 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,944 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 6,944 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,008 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,008 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,008 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,008 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,072 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,072 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,072 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,072 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,136 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,136 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,136 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,136 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,200 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,264 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,328 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,392 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,456 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,520 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,584 1,504 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,584 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,584 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,584 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,456 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,520 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,392 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,328 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,264 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,200 1,312 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,520 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,520 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,456 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,456 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,392 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,392 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,328 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,328 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,264 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,264 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,200 1,376 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+Tile_05 7,200 1,440 64 64 ..\..\Binary\Resources\Sprite\Tile\Tile_05.png
+3
+21
+Collision
+0 10 628 584 1,102
+0 714 950 388 421
+0 1,032 1,338 199 227
+0 1,478 1,591 260 290
+0 1,734 1,851 326 354
+0 1,926 2,042 452 484
+0 2,253 2,677 587 1,113
+0 2,888 3,001 708 734
+0 3,143 3,257 1,029 1,056
+0 3,526 3,642 836 866
+0 3,975 4,092 645 675
+0 4,383 4,581 790 883
+0 4,888 4,972 986 1,079
+0 5,382 5,435 903 933
+0 5,572 5,626 1,093 1,125
+0 5,829 5,881 776 805
+0 6,020 6,074 646 675
+0 6,148 6,203 838 867
+0 6,276 6,330 1,030 1,056
+0 6,666 7,666 1,226 1,573
+0 5,251 5,310 836 866
