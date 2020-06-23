@@ -18,6 +18,7 @@ HRESULT CScene::Ready_Scene()
 	m_pRenderMgr = CRenderManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 	m_pAnimationMgr = CAnimationManager::GetInstance();
+	m_pSoundMgr = CSoundManager::GetInstance();
 
 	m_pSceneMgr->Get_ChangeScene() = FALSE;
 

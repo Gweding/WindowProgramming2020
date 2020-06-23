@@ -8,6 +8,8 @@ class CSceneManager;
 class CRenderManager;
 class CResourseManager;
 class CAnimationManager;
+class CSoundManager;
+
 class CScene
 {
 public:
@@ -34,6 +36,7 @@ protected:
 	CRenderManager* m_pRenderMgr = nullptr;
 	CResourceManager* m_pResourceMgr = nullptr;
 	CAnimationManager* m_pAnimationMgr = nullptr;
+	CSoundManager* m_pSoundMgr = nullptr;
 
 protected:
 	virtual void	Free();

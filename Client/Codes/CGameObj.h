@@ -6,6 +6,7 @@ class CGameManager;
 class CRenderManager;
 class CResourceManager;
 class CAnimationManager;
+class CSoundManager;
 class CGameObj
 {
 public:
@@ -34,6 +35,7 @@ protected:
 	CGameManager*		m_pGameMgr = nullptr;
 	CResourceManager* m_pResourceMgr = nullptr;
 	CAnimationManager* m_pAnimationMgr = nullptr;
+	CSoundManager* m_pSoundMgr = nullptr;
 
 protected:
 	INFO			m_tInfo;

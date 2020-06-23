@@ -25,6 +25,9 @@ HRESULT CScene_Stage2::Ready_Scene()
 	pObj = CPortal::Create(10994.4f, 1761.72f);
 	m_pGameMgr->Add_GameObject(MAP, pObj);
 
+	m_pSoundMgr->Stop_Sound();
+
+	m_pSoundMgr->Play_BGM(L"");
 	m_pMap = m_pMapMgr->Find_Map(L"Map_Stage2");
 	if (m_pMap == nullptr)
 	return E_FAIL;
