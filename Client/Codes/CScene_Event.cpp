@@ -21,12 +21,15 @@ HRESULT CScene_Event::Ready_Scene(int iType)
 
 HRESULT CScene_Event::Update_Scene(const float& fTimeDelta)
 {
-	m_fTime += fTimeDelta;
-
-	if (m_fTime > 0.5f)
+	if (m_iType != 2)
 	{
-		m_fTime = 0.f;
-		m_bRender = !m_bRender;
+		m_fTime += fTimeDelta;
+
+		if (m_fTime > 0.5f)
+		{
+			m_fTime = 0.f;
+			m_bRender = !m_bRender;
+		}
 	}
 
 	return CScene::Update_Scene(fTimeDelta);
@@ -36,7 +39,7 @@ HRESULT CScene_Event::Render_Scene(HDC hDC)
 {
 	if (m_pKeyMgr->KeyDown(KEY_RESTART))
 	{
-		m_pSceneMgr->Change_Scene(CSceneManager::SCENE_TUTORIAL);
+		m_pSceneMgr->Change_LastScene();
 		return NOERROR;
 	}
 

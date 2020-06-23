@@ -2,6 +2,7 @@
 #include "CScene_Stage1.h"
 
 #include "CPlayer.h"
+#include "CPortal.h"
 
 CScene_Stage1::CScene_Stage1()
 {
@@ -18,11 +19,13 @@ HRESULT CScene_Stage1::Ready_Scene()
 	CGameObj* pObj = nullptr;
 	CGameObj* pObj1 = nullptr;
 
-	pObj = CPlayer::Create(100.f, 100.f);
+	pObj = CPlayer::Create(50.f, 5500.f, 8000.f);
 	m_pGameMgr->Add_GameObject(PLAYER, pObj);
-	
-	m_pMap = m_pMapMgr->Find_Map(L"Map_Tutorial");
-	//m_pMap = m_pMapMgr->Find_Map(L"Map_Stage0");
+
+	pObj = CPortal::Create(1574.08, 805.649);
+	m_pGameMgr->Add_GameObject(MAP, pObj);
+
+	m_pMap = m_pMapMgr->Find_Map(L"Map_Stage1");
 	if (m_pMap == nullptr)
 	return E_FAIL;
 
@@ -41,6 +44,12 @@ HRESULT CScene_Stage1::Update_Scene(const float& fTimeDelta)
 
 HRESULT CScene_Stage1::Render_Scene(HDC hDC)
 {
+	if (m_pKeyMgr->KeyDown(KEY_NEXTSTAGE))
+	{
+		m_pSceneMgr->Change_Scene(CSceneManager::SCENE_STAGE2);
+		return NOERROR;
+	}
+
 	m_pMap->Render_GameObj(hDC);
 
 	return CScene::Render_Scene(hDC);

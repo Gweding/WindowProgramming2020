@@ -1,28 +1,31 @@
 #include "stdafx.h"
-#include "CScene_TestStage.h"
+#include "CScene_Stage2.h"
 
 #include "CPlayer.h"
+#include "CPortal.h"
 
-CScene_TestStage::CScene_TestStage()
+CScene_Stage2::CScene_Stage2()
 {
 }
 
-CScene_TestStage::~CScene_TestStage()
+CScene_Stage2::~CScene_Stage2()
 {
 	Free();
 }
 
-HRESULT CScene_TestStage::Ready_Scene()
+HRESULT CScene_Stage2::Ready_Scene()
 {
 	CScene::Ready_Scene();
 	CGameObj* pObj = nullptr;
 	CGameObj* pObj1 = nullptr;
 
-	pObj = CPlayer::Create(100.f, 300.f, 1000.f);
+	pObj = CPlayer::Create(100.f, 2000.f, 4000.f);
 	m_pGameMgr->Add_GameObject(PLAYER, pObj);
-	
-	m_pMap = m_pMapMgr->Find_Map(L"Map_Tutorial");
-	//m_pMap = m_pMapMgr->Find_Map(L"Map_Stage0");
+
+	pObj = CPortal::Create(10994.4, 1761.72);
+	m_pGameMgr->Add_GameObject(MAP, pObj);
+
+	m_pMap = m_pMapMgr->Find_Map(L"Map_Stage2");
 	if (m_pMap == nullptr)
 	return E_FAIL;
 
@@ -32,23 +35,23 @@ HRESULT CScene_TestStage::Ready_Scene()
 	return NOERROR;
 }
 
-HRESULT CScene_TestStage::Update_Scene(const float& fTimeDelta)
+HRESULT CScene_Stage2::Update_Scene(const float& fTimeDelta)
 {
 	m_pMap->Update_GameObj(fTimeDelta);
 
 	return CScene::Update_Scene(fTimeDelta);
 }
 
-HRESULT CScene_TestStage::Render_Scene(HDC hDC)
+HRESULT CScene_Stage2::Render_Scene(HDC hDC)
 {
 	m_pMap->Render_GameObj(hDC);
 
 	return CScene::Render_Scene(hDC);
 }
 
-CScene_TestStage* CScene_TestStage::Create()
+CScene_Stage2* CScene_Stage2::Create()
 {
-	CScene_TestStage* pInstance = new CScene_TestStage();
+	CScene_Stage2* pInstance = new CScene_Stage2();
 
 	if (FAILED(pInstance->Ready_Scene()))
 	{
@@ -59,7 +62,7 @@ CScene_TestStage* CScene_TestStage::Create()
 	return pInstance;
 }
 
-void CScene_TestStage::Free()
+void CScene_Stage2::Free()
 {
 	m_pImage.Destroy();
 	m_pGameMgr->Reset_OBJLIST();

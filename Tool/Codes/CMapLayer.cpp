@@ -390,19 +390,20 @@ void CMapLayer::Render_CollisionLayer(HDC hdc)
 
 	for (size_t i = 0; i < m_vecColl.size(); ++i)
 	{
-		int iPen = 2;
 		int iSel = m_pDialog->m_CollListbox.GetCurSel();
 		if (i == iSel)
-			iPen = 3;
-
-		if (m_vecColl[i]->iType == COLL_ALL)
-			m_hPen = CreatePen(PS_SOLID, iPen, RGB(255, 0, 0));
-		else if (m_vecColl[i]->iType == COLL_JUMP)
-			m_hPen = CreatePen(PS_SOLID, iPen, RGB(0, 255, 0));
-		else if (m_vecColl[i]->iType == COLL_INTERACT)
-			m_hPen = CreatePen(PS_SOLID, iPen, RGB(0, 0, 255));
+			m_hPen = CreatePen(PS_SOLID, 5, RGB(255, 0, 0));
 		else
-			m_hPen = CreatePen(PS_SOLID, iPen, RGB(255, 255, 255));
+			m_hPen = CreatePen(PS_SOLID, 2, RGB(0, 255, 0));
+
+		//if (m_vecColl[i]->iType == COLL_ALL)
+		//	m_hPen = CreatePen(PS_SOLID, iPen, RGB(255, 0, 0));
+		//else if (m_vecColl[i]->iType == COLL_JUMP)
+		//	m_hPen = CreatePen(PS_SOLID, iPen, RGB(0, 255, 0));
+		//else if (m_vecColl[i]->iType == COLL_INTERACT)
+		//	m_hPen = CreatePen(PS_SOLID, iPen, RGB(0, 0, 255));
+		//else
+		//	m_hPen = CreatePen(PS_SOLID, iPen, RGB(255, 255, 255));
 		m_hOldPen = SelectObject(hdc, m_hPen);
 		m_hBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
 		m_hOldBrush = SelectObject(hdc, m_hBrush);

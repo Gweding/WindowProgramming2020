@@ -68,6 +68,8 @@ void CKeyManager::UpdateKey()
 		m_dwCurKey |= KEY_INTERACT;
 	if (GetAsyncKeyState('R') & 0x8000)
 		m_dwCurKey |= KEY_RESTART;
+	if (GetAsyncKeyState(VK_F3) & 0x8000)
+		m_dwCurKey |= KEY_NEXTSTAGE;
 }
 
 

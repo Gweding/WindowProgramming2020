@@ -8,7 +8,7 @@ public:
 	virtual ~CPlayer();
 
 public:
-	virtual HRESULT		Ready_GameObj(float fStartX, float fStartY);
+	virtual HRESULT		Ready_GameObj(float fStartX, float fStartY, float fDeathLimit);
 	virtual int					Update_GameObj(const float& fTimeDelta);
 	virtual void				Render_GameObj(HDC hDC);
 
@@ -43,8 +43,11 @@ private:
 	bool							m_bRight;
 	int								m_iCheck;
 
+private:
+	float							m_fDeathLimit = 1000.f;
+
 public:
-	static CPlayer* Create(float fStartX, float fStartY);
+	static CPlayer* Create(float fStartX, float fStartY, float fDeathLimit);
 
 protected:
 	virtual void	Free();

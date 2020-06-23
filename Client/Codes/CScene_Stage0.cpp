@@ -19,7 +19,7 @@ HRESULT CScene_Stage0::Ready_Scene()
 	CGameObj* pObj = nullptr;
 	CGameObj* pObj1 = nullptr;
 
-	pObj = CPlayer::Create(100.f, 100.f);
+	pObj = CPlayer::Create(100.f, 100.f, 2000.f);
 	m_pGameMgr->Add_GameObject(PLAYER, pObj);
 
 	pObj = CPortal::Create(7326.99, 995.142);
@@ -45,6 +45,12 @@ HRESULT CScene_Stage0::Update_Scene(const float& fTimeDelta)
 
 HRESULT CScene_Stage0::Render_Scene(HDC hDC)
 {
+	if (m_pKeyMgr->KeyDown(KEY_NEXTSTAGE))
+	{
+		m_pSceneMgr->Change_Scene(CSceneManager::SCENE_STAGE1);
+		return NOERROR;
+	}
+
 	m_pMap->Render_GameObj(hDC);
 
 	return CScene::Render_Scene(hDC);

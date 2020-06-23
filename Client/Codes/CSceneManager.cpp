@@ -9,6 +9,7 @@
 #include "CScene_TutorialStage.h"
 #include "CScene_Stage0.h"
 #include "CScene_Stage1.h"
+#include "CScene_Stage2.h"
 #include "CScene_Event.h"
 
 IMPLEMENT_SINGLETON(CSceneManager)
@@ -65,6 +66,9 @@ HRESULT CSceneManager::Change_Scene(SCENE_ID eID)
 		case CSceneManager::SCENE_STAGE1:
 			m_pScene = CScene_Stage1::Create();
 			break;
+		case CSceneManager::SCENE_STAGE2:
+			m_pScene = CScene_Stage2::Create();
+			break;
 		case CSceneManager::SCENE_GAMEOVER0:
 			m_pScene = CScene_Event::Create(0);
 			break;
@@ -84,6 +88,7 @@ HRESULT CSceneManager::Change_Scene(SCENE_ID eID)
 			return E_FAIL;
 		}
 
+		m_eLastScene = m_eCurScene;
 		m_eCurScene = m_eNextScene;
 	}
 
@@ -94,6 +99,11 @@ HRESULT CSceneManager::Change_NextScene()
 {
 	m_eNextScene = SCENE_ID(m_eCurScene + 1);
 	return NOERROR;
+}
+
+HRESULT CSceneManager::Change_LastScene()
+{
+	return Change_Scene(m_eLastScene);
 }
 
 void CSceneManager::Free()

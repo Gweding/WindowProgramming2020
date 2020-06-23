@@ -100,6 +100,9 @@
     <Filter Include="01 GameObj\03 Portal">
       <UniqueIdentifier>{c8c85ae0-5eeb-4b90-a05f-24b4ba91493b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02 Scene\03 Stage2">
+      <UniqueIdentifier>{cc5d8d5c-cd52-4d4f-954c-2c422b9e76f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -197,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="CScene_Event.h">
       <Filter>02 Scene\96 EventScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Stage2.h">
+      <Filter>02 Scene\03 Stage2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +305,9 @@
     </ClCompile>
     <ClCompile Include="CScene_Event.cpp">
       <Filter>02 Scene\96 EventScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Stage2.cpp">
+      <Filter>02 Scene\03 Stage2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

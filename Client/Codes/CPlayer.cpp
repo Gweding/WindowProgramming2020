@@ -11,7 +11,7 @@ CPlayer::~CPlayer()
 	Free();
 }
 
-HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
+HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY, float fDeathLimit)
 {
 	CGameObj::Ready_GameObj();
 
@@ -19,6 +19,7 @@ HRESULT CPlayer::Ready_GameObj(float fStartX, float fStartY)
 	m_tInfo.y = fStartY /*+ 15*/;
 	m_tInfo.cx = 100.f;
 	m_tInfo.cy = 100.f;
+	m_fDeathLimit = fDeathLimit;
 
 	m_bRight = true;
 	m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Idle_Head_R");
@@ -63,7 +64,7 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	CGameObj::Update_Rect();
 	m_pRenderMgr->AddBack_RenderList(this);
 
-	if (m_tInfo.y > 1500.f)
+	if (m_tInfo.y > m_fDeathLimit)
 	{
 		CSceneManager::GetInstance()->Get_ChangeScene() = TRUE;
 		CSceneManager::GetInstance()->Get_NextScene() = CSceneManager::SCENE_GAMEOVER0;
@@ -529,11 +530,11 @@ void CPlayer::Change_State(PLAYERSTATUS eState)
 	m_iCheck = eState;
 }
 
-CPlayer* CPlayer::Create(float fStartX, float fStartY)
+CPlayer* CPlayer::Create(float fStartX, float fStartY, float fDeathLimit)
 {
 	CPlayer* pInstance = new CPlayer;
 
-	if (FAILED(pInstance->Ready_GameObj(fStartX, fStartY)))
+	if (FAILED(pInstance->Ready_GameObj(fStartX, fStartY, fDeathLimit)))
 	{
 		SafeDelete(pInstance);
 		return nullptr;
