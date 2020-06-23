@@ -9,7 +9,7 @@ public:
 	~CSoundManager(void);
 
 public:
-	enum CHANNELID { BGM, PLAYER, EFFECT, UI, MAXCHANNEL };
+	enum CHANNELID { BGM, PLAYER, EFFECT, JUMP, DJUMP, ATTACK, JATTACK, UI, MAXCHANNEL };
 	// 소리가 서로 씹히는걸 방지하기 위해서 채널로 관리를 함
 
 public:

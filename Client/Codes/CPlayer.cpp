@@ -484,11 +484,12 @@ void CPlayer::Change_State(PLAYERSTATUS eState)
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 		break;
 	case JUMP:
-		
+		m_pSoundMgr->Play_Sound(L"Default_Jump.wav", CSoundManager::CHANNELID::JUMP);
 		if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
 		break;
 	case DJUMP:
+		m_pSoundMgr->Play_Sound(L"Default_Jump_Air.wav", CSoundManager::CHANNELID::DJUMP);
 		if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
 		break;
@@ -497,10 +498,13 @@ void CPlayer::Change_State(PLAYERSTATUS eState)
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Fall_Head_R");
 		break;
 	case ATTACK:
+		m_pSoundMgr->Play_Sound(L"Skul_Atk 2.wav", CSoundManager::CHANNELID::ATTACK);
 		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_R");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Attack_Head_L");
 		break;
 	case JMPATTACK:
+		m_pSoundMgr->Play_Sound(L"Skul_Jump_Atk.wav", CSoundManager::CHANNELID::JATTACK);
+		
 		if (m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_R");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_JumpAttack_Head_L");
 		break;
