@@ -23,7 +23,7 @@ public:
 	void Stop_All();																													// 모든 채널 끄는거
 
 public:
-	void	Load_SoundFile(const char* pFilePath);
+	HRESULT	Load_SoundFile(const char* pFilePath);
 
 public:
 	double Get_Position();

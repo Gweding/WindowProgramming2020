@@ -167,8 +167,6 @@ unsigned int __stdcall CScene_Loading::Load_Resource(void* pParam)
 		return E_FAIL;
 	}
 
-
-
 	pLogo->m_strLoadingMessage = L"PRESS ENTER";
 	pLogo->m_bLoadingEnd = true;
 

@@ -67,7 +67,7 @@ void CSoundManager::Stop_All()
 	}
 }
 
-void CSoundManager::Load_SoundFile(const char* pFilePath)
+HRESULT CSoundManager::Load_SoundFile(const char* pFilePath)
 {
 	_finddata_t fd;
 	
@@ -78,7 +78,7 @@ void CSoundManager::Load_SoundFile(const char* pFilePath)
 	intptr_t Handle = _findfirst(pFindFirstPath, &fd);
 
 	if (0 == Handle)
-		return;
+		return E_FAIL;
 
 	int iResult = 0;
 
@@ -114,6 +114,8 @@ void CSoundManager::Load_SoundFile(const char* pFilePath)
 		iResult = _findnext(Handle, &fd);
 	}
 	FMOD_System_Update(m_pSystem);
+
+	return NOERROR;
 }
 
 double CSoundManager::Get_Position()

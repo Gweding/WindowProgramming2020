@@ -30,6 +30,9 @@ HRESULT CMainApp::Ready_MainApp()
 	if (AddFontResource(L"../../Binary/Font/NanumSquareEB.ttf") == 0)
 		return E_FAIL;
 
+	CSoundManager::GetInstance()->Ready_SoundManager();
+	CSoundManager::GetInstance()->Load_SoundFile("..\\..\\Binary\\Resources\\Sound\\");
+
 	return S_OK;
 }
 
@@ -89,4 +92,5 @@ void CMainApp::Free()
 	CGameManager::GetInstance()->DestroyInstance();
 	CRenderManager::GetInstance()->DestroyInstance();
 	CResourceManager::GetInstance()->DestroyInstance();
+	CSoundManager::GetInstance()->DestroyInstance();
 }
