@@ -26,7 +26,7 @@ public:
 	HRESULT					Add_Collision(COLL_RECT* pRect);
 
 private:
-	BOOL							m_bRenderCollider = TRUE;
+	BOOL							m_bRenderCollider = FALSE;
 
 private:
 	list<CTile*>				m_lstTile;

@@ -11,6 +11,7 @@ public:
 	RECT Get_CollRect();
 	int Get_CollSize(int iAxis);
 	RECT Get_OriginCollRect() { return m_tCollRect; }
+	BOOL& Get_RenderCollider() { return m_bRenderCollider; }
 
 public:
 	virtual HRESULT		Ready_GameObj();
@@ -37,7 +38,7 @@ private:
 
 private:
 	BOOL m_bAnimationEnd = FALSE;
-	BOOL m_bRenderCollider = TRUE;
+	BOOL m_bRenderCollider = FALSE;
 
 private:
 	HPEN			m_hPen;

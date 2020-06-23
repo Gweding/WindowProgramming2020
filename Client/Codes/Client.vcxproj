@@ -187,6 +187,7 @@
     <ClInclude Include="CScene_TestStage.h" />
     <ClInclude Include="CScene_TutorialStage.h" />
     <ClInclude Include="CScrollManager.h" />
+    <ClInclude Include="CSoundManager.h" />
     <ClInclude Include="CTile.h" />
     <ClInclude Include="CTimeManager.h" />
     <ClInclude Include="stdafx.h" />
@@ -222,6 +223,7 @@
     <ClCompile Include="CScene_TestStage.cpp" />
     <ClCompile Include="CScene_TutorialStage.cpp" />
     <ClCompile Include="CScrollManager.cpp" />
+    <ClCompile Include="CSoundManager.cpp" />
     <ClCompile Include="CTile.cpp" />
     <ClCompile Include="CTimeManager.cpp" />
   </ItemGroup>

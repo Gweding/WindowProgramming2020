@@ -44,6 +44,9 @@ int CPlayer::Update_GameObj(const float& fTimeDelta)
 	if (Update_State(fTimeDelta) == OBJ_DEAD)
 		return OBJ_DEAD;
 
+	if (m_pKeyMgr->KeyDown(KEY_PLAYERCOLLIDER))
+		m_pAnimation->Get_RenderCollider() = !m_pAnimation->Get_RenderCollider();
+
 	m_pAnimation->Update_Position(m_tInfo.x, m_tInfo.y);
 
 	if (m_bGravity)
@@ -77,18 +80,18 @@ void CPlayer::Render_GameObj(HDC hDC)
 {
 	m_pAnimation->Render_GameObj(hDC);
 
-	HPEN			m_hPen = CreatePen(PS_SOLID, 1, RGB(m_tColor.r, m_tColor.g, m_tColor.b));
-	HGDIOBJ	m_hOldPen = SelectObject(hDC, m_hPen);
-	HBRUSH		m_hBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
-	HGDIOBJ	m_hOldBrush = SelectObject(hDC, m_hBrush);
-	Rectangle(hDC, (int)m_tRect.left - (int)CScrollManager::GetScrollPos(0)
-								, (int)m_tRect.top - (int)CScrollManager::GetScrollPos(1)
-								, (int)m_tRect.right - (int)CScrollManager::GetScrollPos(0)
-								, (int)m_tRect.bottom - (int)CScrollManager::GetScrollPos(1));
-	SelectObject(hDC, m_hOldPen);
-	SelectObject(hDC, m_hOldBrush);
-	DeleteObject(m_hBrush);
-	DeleteObject(m_hPen);
+	//HPEN			m_hPen = CreatePen(PS_SOLID, 1, RGB(m_tColor.r, m_tColor.g, m_tColor.b));
+	//HGDIOBJ	m_hOldPen = SelectObject(hDC, m_hPen);
+	//HBRUSH		m_hBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
+	//HGDIOBJ	m_hOldBrush = SelectObject(hDC, m_hBrush);
+	//Rectangle(hDC, (int)m_tRect.left - (int)CScrollManager::GetScrollPos(0)
+	//							, (int)m_tRect.top - (int)CScrollManager::GetScrollPos(1)
+	//							, (int)m_tRect.right - (int)CScrollManager::GetScrollPos(0)
+	//							, (int)m_tRect.bottom - (int)CScrollManager::GetScrollPos(1));
+	//SelectObject(hDC, m_hOldPen);
+	//SelectObject(hDC, m_hOldBrush);
+	//DeleteObject(m_hBrush);
+	//DeleteObject(m_hPen);
 }
 
 int CPlayer::Update_Collision()

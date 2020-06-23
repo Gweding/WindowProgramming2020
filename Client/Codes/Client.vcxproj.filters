@@ -103,6 +103,9 @@
     <Filter Include="02 Scene\03 Stage2">
       <UniqueIdentifier>{cc5d8d5c-cd52-4d4f-954c-2c422b9e76f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98 Manager\09 SoundManager">
+      <UniqueIdentifier>{9f830e33-4e8a-4f6e-96ea-7a96ab27359f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -203,6 +206,9 @@
     </ClInclude>
     <ClInclude Include="CScene_Stage2.h">
       <Filter>02 Scene\03 Stage2</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundManager.h">
+      <Filter>98 Manager\09 SoundManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +314,9 @@
     </ClCompile>
     <ClCompile Include="CScene_Stage2.cpp">
       <Filter>02 Scene\03 Stage2</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundManager.cpp">
+      <Filter>98 Manager\09 SoundManager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

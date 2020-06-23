@@ -57,8 +57,8 @@ int CAnimation::Update_GameObj(const float& fTimeDelta)
 
 	CGameObj::Update_Rect();
 
-	if (m_pKeyMgr->KeyDown(KEY_PLAYERCOLLIDER))
-		m_bRenderCollider = !m_bRenderCollider;
+	//if (m_pKeyMgr->KeyDown(KEY_PLAYERCOLLIDER))
+	//	m_bRenderCollider = !m_bRenderCollider;
 
 	return 0;
 }
