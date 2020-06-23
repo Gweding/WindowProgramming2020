@@ -484,6 +484,7 @@ void CPlayer::Change_State(PLAYERSTATUS eState)
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Walk_Head_L");
 		break;
 	case JUMP:
+		
 		if (!m_bRight) m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_L");
 		else m_pAnimation = m_pAnimationMgr->Find_Animation(L"Player_Jump_Head_R");
 		break;

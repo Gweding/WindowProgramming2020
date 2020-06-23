@@ -23,6 +23,7 @@
 #include "CGameManager.h"
 #include "CSceneManager.h"
 #include "CRenderManager.h"
+#include "CSoundManager.h"
 #include "CResourceManager.h"
 #include "CCollisionManager.h"
 #include "CAnimationManager.h"

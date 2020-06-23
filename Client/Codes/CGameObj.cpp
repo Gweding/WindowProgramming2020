@@ -18,7 +18,7 @@ HRESULT CGameObj::Ready_GameObj()
 	m_pRenderMgr = CRenderManager::GetInstance();
 	m_pResourceMgr = CResourceManager::GetInstance();
 	m_pAnimationMgr = CAnimationManager::GetInstance();
-
+	m_pSoundMgr = CSoundManager::GetInstance();
 	return S_OK;
 }
 
