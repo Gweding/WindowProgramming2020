@@ -31,7 +31,10 @@ HRESULT CMainApp::Ready_MainApp()
 		return E_FAIL;
 
 	CSoundManager::GetInstance()->Ready_SoundManager();
-	CSoundManager::GetInstance()->Load_SoundFile("..\\..\\Binary\\Resources\\Sound\\");
+	if (FAILED(CSoundManager::GetInstance()->Load_SoundFile("..\\..\\Binary\\Resources\\Sound\\")))
+		return E_FAIL;
+
+	CSoundManager::GetInstance()->Play_BGM(L"Tutorial.wav");
 
 	return S_OK;
 }

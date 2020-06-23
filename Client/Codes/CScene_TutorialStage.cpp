@@ -25,7 +25,9 @@ HRESULT CScene_TutorialStage::Ready_Scene()
 	pObj = CPortal::Create(2231.25f, 357.354f);
 	m_pGameMgr->Add_GameObject(MAP, pObj);
 
-	m_pSoundMgr->Play_BGM(L"Tutorial.wav"); // 브금 시작
+	m_pSoundMgr->Stop_Sound(CSoundManager::BGM);
+	m_pSoundMgr->Play_BGM(L"Chapter1.wav"); // 브금 시작
+
 	m_pMap = m_pMapMgr->Find_Map(L"Map_Tutorial");
 	if (m_pMap == nullptr)
 	return E_FAIL;

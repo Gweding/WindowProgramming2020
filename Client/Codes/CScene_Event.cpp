@@ -16,6 +16,9 @@ HRESULT CScene_Event::Ready_Scene(int iType)
 
 	m_iType = iType;
 
+	m_pSoundMgr->Stop_All();
+	m_pSoundMgr->Play_Sound(L"Default_Dead.wav", CSoundManager::EFFECT); // 브금 시작
+
 	return NOERROR;
 }
 
@@ -39,6 +42,14 @@ HRESULT CScene_Event::Render_Scene(HDC hDC)
 {
 	if (m_pKeyMgr->KeyDown(KEY_RESTART))
 	{
+		if (m_pSceneMgr->Get_LastScene() == CSceneManager::SCENE_STAGE0
+			|| m_pSceneMgr->Get_LastScene() == CSceneManager::SCENE_STAGE1
+			|| m_pSceneMgr->Get_LastScene() == CSceneManager::SCENE_TUTORIAL)
+		{
+			m_pSoundMgr->Stop_Sound(CSoundManager::BGM);
+			m_pSoundMgr->Play_BGM(L"Chapter1.wav"); // 브금 시작
+		}
+
 		m_pSceneMgr->Change_LastScene();
 		return NOERROR;
 	}

@@ -26,7 +26,7 @@ HRESULT CScene_Stage0::Ready_Scene()
 	m_pGameMgr->Add_GameObject(MAP, pObj);
 
 	m_pMap = m_pMapMgr->Find_Map(L"Map_Stage0");
-	//m_pMap = m_pMapMgr->Find_Map(L"Map_Stage0");
+
 	if (m_pMap == nullptr)
 	return E_FAIL;
 
