@@ -22,7 +22,7 @@ HRESULT CScene_Stage2::Ready_Scene()
 	pObj = CPlayer::Create(100.f, 2000.f, 4000.f);
 	m_pGameMgr->Add_GameObject(PLAYER, pObj);
 
-	pObj = CPortal::Create(10994.4, 1761.72);
+	pObj = CPortal::Create(10994.4f, 1761.72f);
 	m_pGameMgr->Add_GameObject(MAP, pObj);
 
 	m_pMap = m_pMapMgr->Find_Map(L"Map_Stage2");

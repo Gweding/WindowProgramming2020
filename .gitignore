@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 # Build Files
+/Tool.exe - 바로 가기.lnk

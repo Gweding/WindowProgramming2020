@@ -47,15 +47,15 @@ bool CCollisionManager::Check_Rect(RECT tDst, RECT tSrc, float* pMoveX, float* p
 	INFO tDstInfo = {};
 	INFO tSrcInfo = {};
 
-	tDstInfo.cx = tDst.right - tDst.left;
-	tDstInfo.cy = tDst.bottom - tDst.top;
-	tDstInfo.x = tDst.left + (tDstInfo.cx * 0.5f);
-	tDstInfo.y = tDst.top + (tDstInfo.cy * 0.5f);
+	tDstInfo.cx = float(tDst.right - tDst.left);
+	tDstInfo.cy = float(tDst.bottom - tDst.top);
+	tDstInfo.x = (float)tDst.left + (tDstInfo.cx * 0.5f);
+	tDstInfo.y = (float)tDst.top + (tDstInfo.cy * 0.5f);
 
-	tSrcInfo.cx = tSrc.right - tSrc.left;
-	tSrcInfo.cy = tSrc.bottom - tSrc.top;
-	tSrcInfo.x = tSrc.left + (tSrcInfo.cx * 0.5f);
-	tSrcInfo.y = tSrc.top + (tSrcInfo.cy * 0.5f);
+	tSrcInfo.cx = float( tSrc.right - tSrc.left);
+	tSrcInfo.cy = float(tSrc.bottom - tSrc.top);
+	tSrcInfo.x = (float)tSrc.left + (tSrcInfo.cx * 0.5f);
+	tSrcInfo.y = (float)tSrc.top + (tSrcInfo.cy * 0.5f);
 
 	// 두 사각형의 가로, 세로 축 반지름의 합을 구한다.
 	float fSumRadX = (tDstInfo.cx + tSrcInfo.cx) * 0.5f;

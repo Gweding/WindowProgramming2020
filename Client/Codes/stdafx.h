@@ -29,6 +29,9 @@
 #include "CMapManager.h"
 #include "CScrollManager.h"
 
+
+#ifdef _DEBUG
+
 /*____________________________________________________________________
 Window Console창.
 ______________________________________________________________________*/
@@ -37,9 +40,6 @@ ______________________________________________________________________*/
 #else
 #pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console") 
 #endif
-
-
-#ifdef _DEBUG
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
